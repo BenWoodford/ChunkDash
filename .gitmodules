@@ -1,3 +1,6 @@
 [submodule "api/lib/epiphany"]
 	path = api/lib/epiphany
 	url = https://github.com/jmathai/epiphany.git
+[submodule "api/lib/wunderlist"]
+	path = api/lib/wunderlist
+	url = https://github.com/PENDOnl/Wunderlist2-PHP-Wrapper.git
