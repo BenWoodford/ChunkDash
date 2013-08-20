@@ -9,6 +9,7 @@ class User {
 	public static function getUser($user) {
 		$arr = array(
 			'name' => $user,
+			'basic_data' => User::getBasicInfo($user),
 			'regions' => array(
 				'owned' => User::getOwnedRegions($user),
 				'member' => User::getMembershipRegions($user),
