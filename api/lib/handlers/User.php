@@ -19,14 +19,23 @@ class User {
 	}
 
 	public static function regionFormat($arr) {
-		if(array_key_exists('flags', $arr))
+		if(array_key_exists('flags', $arr)) {
 			$arr['flags'] = unserialize($arr['flags']);
+			if($arr['flags'] == false)
+				$arr['flags'] = array();
+		}
 
-		if(array_key_exists('owners', $arr))
+		if(array_key_exists('owners', $arr)) {
 			$arr['owners'] = explode(",", $arr['owners']);
+			if(count($arr['owners']) == 1 && $arr['owners'][0] == "")
+				$arr['owners'] = array();
+		}
 
-		if(array_key_exists('members', $arr))
+		if(array_key_exists('members', $arr)) {
 			$arr['members'] = explode(",", $arr['members']);
+			if(count($arr['members']) == 1 && $arr['members'][0] == "")
+				$arr['members'] = array();
+		}
 
 		return $arr;
 	}
