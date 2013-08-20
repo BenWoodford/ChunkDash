@@ -8,7 +8,7 @@ class Task {
 		echo "Please use /api/tasks/list";
 	}
 
-	private $wunderlist;
+	static $wunderlist;
 
 	static function initWunderlist() {
 		try {
