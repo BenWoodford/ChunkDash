@@ -10,8 +10,8 @@ class User {
 		$arr = array(
 			'name' => $user,
 			'region' => array(
-				'owned' => getOwnedRegions($user),
-				'member' => getMembershipRegions($user),
+				'owned' => User::getOwnedRegions($user),
+				'member' => User::getMembershipRegions($user),
 			),
 		);
 
