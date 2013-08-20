@@ -2,6 +2,7 @@
 require_once("global.php");
 
 Epi::init('route');
+Epi::init('api');
 
 getRoute()->get('/', 'home');
 getRoute()->get('/user/', array('User', 'stub'));
