@@ -23,7 +23,9 @@ class Task {
 	}
 
 	static function getTasks() {
-		Task::initWunderlist();
+		$response = Task::initWunderlist();
+		if(is_array($response))
+			return $response;
 
 		try {
 			$tasks = Task::$wunderlist->getTasksByList(WLLIST, true);
