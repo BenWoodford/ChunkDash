@@ -8,6 +8,8 @@ class Task {
 		echo "Please use /api/tasks/list";
 	}
 
+	private $wunderlist;
+
 	static function initWunderlist() {
 		try {
 			Task::$wunderlist = new Wunderlist(WLUSER, WLPASS);
