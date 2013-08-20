@@ -33,7 +33,7 @@ class Task {
 		} catch(Exception $e) {
 			return array(
 				'response' => 'error',
-				'message' => $->getMessage(),
+				'message' => $e->getMessage(),
 				'list_id' => WLLIST,
 			);
 		}
