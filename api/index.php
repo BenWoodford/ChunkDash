@@ -5,11 +5,13 @@ Epi::init('route');
 Epi::init('api');
 
 getRoute()->get('/', 'home');
-getRoute()->get('/user/', array('User', 'stub'));
+getRoute()->get('/user', array('User', 'stub'));
 getApi()->get('/user/([a-z0-9_]{2,16})', array('User', 'getUser'), EpiApi::external);
 getApi()->get('/user/([a-z0-9_]{2,16})/regions', array('User', 'getRegions'), EpiApi::external);
 getApi()->get('/user/([a-z0-9_]{2,16})/regions/owned', array('User', 'getOwnedRegions'), EpiApi::external);
 getApi()->get('/user/([a-z0-9_]{2,16})/regions/member', array('User', 'getMembershipRegions'), EpiApi::external);
+getApi()->get('/tasks', array('Task', 'stub'));
+getApi()->get('/tasks/list', array('Task', 'getTasks'));
 
 function home() {
 	echo "Welcome to the API root.";
