@@ -18,6 +18,15 @@ class User {
 		return $arr;
 	}
 
+	public static function getBasicInfo($user) {
+		$userdatums = getDatabase()->all("SELECT * FROM `basic` WHERE `name` = :user", array(':user' => $user));
+		return $userdatums;
+
+		$arr = array(
+			'name' = $userdatums[0]['name'],
+			);
+	}
+
 	public static function regionFormat($arr) {
 		if(array_key_exists('flags', $arr)) {
 			$arr['flags'] = unserialize($arr['flags']);
