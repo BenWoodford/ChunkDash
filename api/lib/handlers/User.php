@@ -82,6 +82,50 @@ class User {
 	public static function getShopPlots($user) {
 		return array_map(array("User", "regionFormat"), getDatabase()->all("SELECT * FROM `regions` WHERE FIND_IN_SET(:user, owners) AND `id` LIKE 'plot_%'", array(':user' => $user)));
 	}
+
+	public static function getUserList($page = 0, $perpage = 25) {
+		$userdatums = getDatabase()->all("SELECT * FROM `basic` ORDER BY `name` ASC LIMIT :page,:perpage", array('page' => $page, 'perpage' => $perpage));
+
+		$arr = array();
+
+		foreach($userdatums as $data) {
+			$serv = $data['server'];
+			$data['homes'] = unserialize($data['homes']);
+			unset($data['server']);
+
+			$name = $data['name'];
+			unset($data['name']);
+
+			if(!is_array($data['name']))
+				$data['name'] = array();
+
+			$arr[$name][$serv] = $data;
+		}
+
+		return $arr;
+	}
+
+	public static function getFilteredUserList($page = 0, $perpage = 25) {
+		$userdatums = getDatabase()->all("SELECT * FROM `basic` ORDER BY `name` ASC LIMIT :page,:perpage", array('page' => $page, 'perpage' => $perpage));
+
+		$arr = array();
+
+		foreach($userdatums as $data) {
+			$serv = $data['server'];
+			$data['homes'] = unserialize($data['homes']);
+			unset($data['server']);
+
+			$name = $data['name'];
+			unset($data['name']);
+
+			if(!is_array($data['name']))
+				$data['name'] = array();
+
+			$arr[$name][$serv] = $data;
+		}
+
+		return $arr;
+	}
 }
 
 ?>
