@@ -1,0 +1,3 @@
+[submodule "api/lib/epiphany"]
+	path = api/lib/epiphany
+	url = https://github.com/jmathai/epiphany.git
