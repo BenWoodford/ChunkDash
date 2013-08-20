@@ -22,7 +22,7 @@ class Task {
 		Task::initWunderlist();
 
 		try {
-			$tasks = Task::$wunderlist->getTasksByList("lwf0b5f1136ea4ec6dada98412620e24", true);
+			$tasks = Task::$wunderlist->getTasksByList("WLLIST", true);
 			return $tasks;
 		} catch(Exception $e) {
 			echo $e->getMessage();
