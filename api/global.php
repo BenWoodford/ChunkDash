@@ -1,5 +1,4 @@
 <?php
-require_once("lib/epiphany/src/Epi.php");
 require_once("../../inc/config.php");
 
 Epi::init('database');
