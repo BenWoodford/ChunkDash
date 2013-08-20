@@ -20,7 +20,7 @@ class User {
 
 	public static function regionFormat($arr) {
 		if(array_key_exists('flags', $arr))
-			$arr['flags'] = deserialize($arr['flags']);
+			$arr['flags'] = unserialize($arr['flags']);
 
 		if(array_key_exists('owners', $arr))
 			$arr['owners'] = explode(",", $arr['owners']);
