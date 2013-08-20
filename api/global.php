@@ -1,9 +1,6 @@
 <?php
 require_once("../../inc/config.php");
 
-Epi::init('database');
-EpiDatabase::employ('mysql', $databases['analytics']['db'], $databases['analytics']['host'], $databases['analytics']['username'], $databases['analytics']['password']);
-
 function autoloader($class) {
     if(!is_dir("lib/cache/"))
         mkdir("lib/cache/");
@@ -40,5 +37,8 @@ function autoloader($class) {
 }
 
 spl_autoload_register('autoloader');
+
+Epi::init('database');
+EpiDatabase::employ('mysql', $databases['analytics']['db'], $databases['analytics']['host'], $databases['analytics']['username'], $databases['analytics']['password']);
 
 ?>
