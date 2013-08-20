@@ -1,7 +1,7 @@
 <?php
 
-require_once("../lib/wunderlist/api.class.php");
-require_once("../lib/wunderlist/api.files.class.php");
+require_once("wunderlist/api.class.php");
+require_once("wunderlist/api.files.class.php");
 
 class Task {
 	static function stub() {
