@@ -44,7 +44,7 @@ foreach(explode("\n", $libdirs) as $d) {
 spl_autoload_register('autoloader');
 
 Epi::setPath('base', 'lib/epiphany/src');
-Epi::setSetting('exceptions', true);
+Epi::setSetting('exceptions', false);
 Epi::init('database');
 EpiDatabase::employ('mysql', $databases['analytics']['db'], $databases['analytics']['host'], $databases['analytics']['username'], $databases['analytics']['password']);
 
