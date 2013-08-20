@@ -18,7 +18,7 @@ class User {
 		return $arr;
 	}
 
-	public static regionFormat($arr) {
+	public static function regionFormat($arr) {
 		if(array_key_exists('flags', $arr))
 			$arr['flags'] = deserialize($arr['flags']);
 
