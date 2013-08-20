@@ -23,7 +23,7 @@ class User {
 		return $userdatums;
 
 		$arr = array(
-			'name' = $userdatums[0]['name'],
+			'name' => $userdatums[0]['name'],
 			);
 	}
 
