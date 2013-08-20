@@ -33,7 +33,12 @@ function autoloader($class) {
             return;
         }
     }
+}
 
+$libdirs = file_get_contents("lib/cfg/autoload.cfg");
+
+foreach(explode("\n", $dirs) as $d) {
+    set_include_path(get_include_path() . PATH_SEPARATOR . $d);
 }
 
 spl_autoload_register('autoloader');
