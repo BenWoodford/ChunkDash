@@ -84,6 +84,9 @@ class User {
 	}
 
 	public static function getUserList($page = 0, $perpage = 25) {
+		$page = @intval($page);
+		$perpage = @intval($perpage);
+		
 		$userdatums = getDatabase()->all("SELECT * FROM `basic` ORDER BY `name` ASC LIMIT :page,:perpage", array('page' => $page, 'perpage' => $perpage));
 
 		$arr = array();
@@ -106,6 +109,9 @@ class User {
 	}
 
 	public static function getFilteredUserList($page = 0, $perpage = 25) {
+		$page = @intval($page);
+		$perpage = @intval($perpage);
+
 		$userdatums = getDatabase()->all("SELECT * FROM `basic` ORDER BY `name` ASC LIMIT :page,:perpage", array('page' => $page, 'perpage' => $perpage));
 
 		$arr = array();
