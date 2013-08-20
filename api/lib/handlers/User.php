@@ -26,6 +26,7 @@ class User {
 
 		foreach($userdatums as $data) {
 			$serv = $data['server'];
+			$data['homes'] = unserialize($data['homes']);
 			unset($data['server']);
 			unset($data['name']);
 			$arr[$serv] = $data;
