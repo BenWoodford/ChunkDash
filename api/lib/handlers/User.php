@@ -18,16 +18,29 @@ class User {
 		return $arr;
 	}
 
+	public static regionFormat($arr) {
+		if(array_key_exists('flags', $arr))
+			$arr['flags'] = deserialize($arr['flags']);
+
+		if(array_key_exists('owners', $arr))
+			$arr['owners'] = explode(",", $arr['owners']);
+
+		if(array_key_exists('members', $arr))
+			$arr['members'] = explode(",", $arr['members']);
+
+		return $arr;
+	}
+
 	public static function getRegions($user) {
-		return getDatabase()->all("SELECT * FROM `regions` WHERE FIND_IN_SET(:user, owners) OR FIND_IN_SET(:user, members)", array(':user' => $user));
+		return array_map("regionFormat", getDatabase()->all("SELECT * FROM `regions` WHERE FIND_IN_SET(:user, owners) OR FIND_IN_SET(:user, members)", array(':user' => $user)));
 	}
 
 	public static function getOwnedRegions($user) {
-		return getDatabase()->all("SELECT * FROM `regions` WHERE FIND_IN_SET(:user, owners)", array(':user' => $user));
+		return array_map("regionFormat", getDatabase()->all("SELECT * FROM `regions` WHERE FIND_IN_SET(:user, owners)", array(':user' => $user)));
 	}
 
 	public static function getMembershipRegions($user) {
-		return getDatabase()->all("SELECT * FROM `regions` WHERE FIND_IN_SET(:user, members)", array(':user' => $user));
+		return array_map("regionFormat", getDatabase()->all("SELECT * FROM `regions` WHERE FIND_IN_SET(:user, members)", array(':user' => $user)));
 	}
 }
 
