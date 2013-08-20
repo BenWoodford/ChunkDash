@@ -1,10 +1,10 @@
 Sections:
 	Real-time Stats
-	Wunderlist read-only?
+A	Wunderlist read-only?
 	Bans/Mutes
 	Shop Plots
 	Item Values
 	Purchase History
 	Infrastructure
-	User Info
+A	User Info
 	

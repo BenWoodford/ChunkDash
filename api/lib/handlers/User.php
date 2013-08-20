@@ -78,6 +78,10 @@ class User {
 	public static function getMembershipRegions($user) {
 		return array_map(array("User", "regionFormat"), getDatabase()->all("SELECT * FROM `regions` WHERE FIND_IN_SET(:user, members)", array(':user' => $user)));
 	}
+
+	public static function getShopPlots($user) {
+		return array_map(array("User", "regionFormat"), getDatabase()->all("SELECT * FROM `regions` WHERE FIND_IN_SET(:user, owners) AND `id` LIKE 'plot_%'", array(':user' => $user)));
+	}
 }
 
 ?>
