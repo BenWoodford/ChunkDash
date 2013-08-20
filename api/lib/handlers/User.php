@@ -21,11 +21,17 @@ class User {
 
 	public static function getBasicInfo($user) {
 		$userdatums = getDatabase()->all("SELECT * FROM `basic` WHERE `name` = :user", array(':user' => $user));
-		return $userdatums;
 
-		$arr = array(
-			'name' => $userdatums[0]['name'],
-			);
+		$arr = array();
+
+		foreach($userdatums as $data) {
+			$serv = $data['server'];
+			unset($data['server']);
+			unset($data['name']);
+			$arr[$serv] = $data;
+		}
+
+		return $arr;
 	}
 
 	public static function regionFormat($arr) {
