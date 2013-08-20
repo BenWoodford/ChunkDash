@@ -32,15 +32,15 @@ class User {
 	}
 
 	public static function getRegions($user) {
-		return array_map("regionFormat", getDatabase()->all("SELECT * FROM `regions` WHERE FIND_IN_SET(:user, owners) OR FIND_IN_SET(:user, members)", array(':user' => $user)));
+		return array_map(array("User", "regionFormat"), getDatabase()->all("SELECT * FROM `regions` WHERE FIND_IN_SET(:user, owners) OR FIND_IN_SET(:user, members)", array(':user' => $user)));
 	}
 
 	public static function getOwnedRegions($user) {
-		return array_map("regionFormat", getDatabase()->all("SELECT * FROM `regions` WHERE FIND_IN_SET(:user, owners)", array(':user' => $user)));
+		return array_map(array("User", "regionFormat"), getDatabase()->all("SELECT * FROM `regions` WHERE FIND_IN_SET(:user, owners)", array(':user' => $user)));
 	}
 
 	public static function getMembershipRegions($user) {
-		return array_map("regionFormat", getDatabase()->all("SELECT * FROM `regions` WHERE FIND_IN_SET(:user, members)", array(':user' => $user)));
+		return array_map(array("User", "regionFormat"), getDatabase()->all("SELECT * FROM `regions` WHERE FIND_IN_SET(:user, members)", array(':user' => $user)));
 	}
 }
 
