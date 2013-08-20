@@ -14,7 +14,11 @@ class Task {
 		try {
 			Task::$wunderlist = new Wunderlist(WLUSER, WLPASS);
 		} catch(Exception $e) {
-			die($e->getMessage());
+			return array(
+				'response' => 'error',
+				'message' => $->getMessage(),
+				'user_login' => WLUSER,
+			);
 		}
 	}
 
@@ -22,10 +26,14 @@ class Task {
 		Task::initWunderlist();
 
 		try {
-			$tasks = Task::$wunderlist->getTasksByList("WLLIST", true);
+			$tasks = Task::$wunderlist->getTasksByList(WLLIST, true);
 			return $tasks;
 		} catch(Exception $e) {
-			echo $e->getMessage();
+			return array(
+				'response' => 'error',
+				'message' => $->getMessage(),
+				'list_id' => WLLIST,
+			);
 		}
 	}
 }
