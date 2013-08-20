@@ -10,11 +10,21 @@ class User {
 		$arr = array(
 			'name' => $user,
 			'basic_data' => User::getBasicInfo($user),
+			'response' => 'success',
 			'regions' => array(
 				'owned' => User::getOwnedRegions($user),
 				'member' => User::getMembershipRegions($user),
 			),
 		);
+
+		if(count($arr['basic_data']) == 0) {
+			// No essentials data? Must not be a user.
+			$arr = array(
+				'name' => $user,
+				'response' => "error",
+				'error' => "User " . $user . " not found in the database!",
+			);
+		}
 
 		return $arr;
 	}
