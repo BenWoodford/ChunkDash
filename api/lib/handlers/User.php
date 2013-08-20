@@ -99,8 +99,8 @@ class User {
 			$name = $data['name'];
 			unset($data['name']);
 
-			if(!is_array($data['name']))
-				$data['name'] = array();
+			if(!is_array($arr[$name]))
+				$arr[$name] = array();
 
 			$arr[$name][$serv] = $data;
 		}
@@ -124,8 +124,8 @@ class User {
 			$name = $data['name'];
 			unset($data['name']);
 
-			if(!is_array($data['name']))
-				$data['name'] = array();
+			if(!is_array($arr[$name]))
+				$arr[$name] = array();
 
 			$arr[$name][$serv] = $data;
 		}
