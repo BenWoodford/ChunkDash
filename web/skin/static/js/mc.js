@@ -44,6 +44,6 @@ $(document).ready(function() {
 		e.preventDefault();
 		$("#content").load($(this).data("page") + " #content", function() {
 			$.getScript("/skin/static/js/pages/" + $(this).data("page") + "/" + $(this).attr('href').replace("/\//g", "") + ".js");
-		}
-	})
+		});
+	});
 });
