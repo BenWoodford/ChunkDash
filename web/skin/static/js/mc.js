@@ -42,8 +42,9 @@ $(document).ready(function() {
 
 	$("#sidemenu a.menu-item").click(function(e) {
 		e.preventDefault();
-		$("#content").load($(this).data("page") + " #content", function() {
-			$.getScript("/skin/static/js/pages/" + $(this).data("page") + "/" + $(this).data("page") + ".js");
+		var page = $(this).data("page");
+		$("#content").load(page + " #content", function() {
+			$.getScript("/skin/static/js/pages/" + page + "/" + page + ".js");
 		});
-	});
+	}); 
 });
