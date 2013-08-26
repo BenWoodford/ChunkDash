@@ -19,6 +19,7 @@ class Notification {
 	}
 
 	public static function getNotificationsMini($user = null) {
+		$user = $user . "@loadingchunks.net";
 		$notifications = getDatabase()->all("SELECT * FROM `notifications` ORDER BY `notification_id` DESC LIMIT 10");
 
 		foreach($notifications as $k=>$n) {
