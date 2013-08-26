@@ -7,7 +7,7 @@ function getNotifications(firstPoll) {
 				notification.show();
 			}
 
-			$("#notificationsList li.dropdown-menu-sub-footer:first-child").before('<li class="notification" id="notification_' + val.notification_id + '"><a href="#">&nbsp;<i class="halflings-icon white comment"></i> <span class="message">' + val.title + '</span> <span class="time">' + val.ago + '</span></a></li>');
+			$("#notificationsList li#view_all").before('<li class="notification" id="notification_' + val.notification_id + '"><a href="#">&nbsp;<i class="halflings-icon white comment"></i> <span class="message">' + val.title + '</span> <span class="time">' + val.ago + '</span></a></li>');
 		});
 	});
 }
