@@ -55,7 +55,6 @@
 						<a href="/skin/static/index.html"><i class="halflings-icon home"></i></a>
 						<a href="#"><i class="halflings-icon cog"></i></a>
 					</div>
-					<h2>Login to your account</h2>
 					<form class="form-horizontal" action="<?=$referrer?>" method="GET" />
 						<fieldset>
 
@@ -65,7 +64,7 @@
 							<div class="clearfix"></div>
 							
 							<div class="input-prepend" title="OpenID Provider">
-								<span class="add-on"><i class="halflings-cog cog"></i></span>
+								<span class="add-on"><i class="icon-cog cog"></i></span>
 								<input class="input-large span10" name="openid_identifier" id="username" type="text" readonly value="https://www.google.com/accounts/o8/id" />
 							</div>
 							<div class="clearfix"></div>
