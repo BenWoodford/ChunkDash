@@ -24,7 +24,7 @@ function getNotifications() {
 		});
 	});
 
-	setTimeout("getNotifications", 10000);
+	setTimeout("getNotifications()", 10000);
 }
 
 function setupNotifications() {
