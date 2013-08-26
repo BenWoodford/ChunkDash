@@ -42,8 +42,12 @@ $(document).ready(function() {
 
 	$("#sidemenu a.menu-item").click(function(e) {
 		e.preventDefault();
+		$("#content #innercontent").fadeOut();
+		$("#sidemenu li").removeClass("active");
+		$(this).parent("li").first().addClass("active");
 		var page = $(this).data("page");
 		$("#content").load(page + " #innercontent", function() {
+			$("#content #innercontent").fadeIn();
 			$.getScript("/skin/static/js/pages/" + page + "/" + page + ".js");
 		});
 	}); 
