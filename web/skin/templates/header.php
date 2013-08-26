@@ -17,7 +17,7 @@
 	<link href="/skin/static/css/bootstrap-responsive.css" rel="stylesheet" />
 	<link id="base-style" href="/skin/static/css/style.css" rel="stylesheet" />
 	<link id="base-style-responsive" href="/skin/static/css/style-responsive.css" rel="stylesheet" />
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css' />
+	<link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css' />
 	
 	<!-- end: CSS -->
 	
@@ -232,7 +232,7 @@
 						<!-- start: User Dropdown -->
 						<li class="dropdown">
 							<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-								<i class="halflings-icon white user"></i> <?=$name?>
+								<i class="halflings-icon white user"></i> <span id="logged_in"><?=$name?></span>
 								<span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu">
