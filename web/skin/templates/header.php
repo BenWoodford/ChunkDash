@@ -70,166 +70,6 @@
 								</li>
 							</ul>
 						</li>
-						<!-- start: Notifications Dropdown -->
-						<li class="dropdown hidden-phone">
-							<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-								<i class="halflings-icon white tasks"></i>
-							</a>
-							<ul class="dropdown-menu tasks">
-								<li>
-									<span class="dropdown-menu-title">You have 17 tasks in progress</span>
-                            	</li>
-								<li>
-                                    <a href="#">
-										<span class="header">
-											<span class="title">iOS Development</span>
-											<span class="percent"></span>
-										</span>
-                                        <div class="taskProgress progressSlim progressBlue">80</div> 
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-										<span class="header">
-											<span class="title">Android Development</span>
-											<span class="percent"></span>
-										</span>
-                                        <div class="taskProgress progressSlim progressBlue">47</div> 
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-										<span class="header">
-											<span class="title">Django Project For Google</span>
-											<span class="percent"></span>
-										</span>
-                                        <div class="taskProgress progressSlim progressBlue">32</div> 
-                                    </a>
-                                </li>
-								<li>
-                                    <a href="#">
-										<span class="header">
-											<span class="title">SEO for new sites</span>
-											<span class="percent"></span>
-										</span>
-                                        <div class="taskProgress progressSlim progressBlue">63</div> 
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-										<span class="header">
-											<span class="title">New blog posts</span>
-											<span class="percent"></span>
-										</span>
-                                        <div class="taskProgress progressSlim progressBlue">80</div> 
-                                    </a>
-                                </li>
-								<li>
-                            		<a class="dropdown-menu-sub-footer">View all tasks</a>
-								</li>	
-							</ul>
-						</li>
-						<!-- end: Notifications Dropdown -->
-						<!-- start: Message Dropdown -->
-						<li class="dropdown hidden-phone">
-							<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-								<i class="halflings-icon white envelope"></i>
-							</a>
-							<ul class="dropdown-menu messages">
-								<li>
-									<span class="dropdown-menu-title">You have 9 messages</span>
-								</li>	
-                            	<li>
-                                    <a href="#">
-										<span class="avatar"><img src="/skin/static/img/avatar.jpg" alt="Avatar" /></span>
-										<span class="header">
-											<span class="from">
-										    	Łukasz Holeczek
-										     </span>
-											<span class="time">
-										    	6 min
-										    </span>
-										</span>
-                                        <span class="message">
-                                            Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
-                                        </span>  
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-										<span class="avatar"><img src="/skin/static/img/avatar2.jpg" alt="Avatar" /></span>
-										<span class="header">
-											<span class="from">
-										    	Megan Abott
-										     </span>
-											<span class="time">
-										    	56 min
-										    </span>
-										</span>
-                                        <span class="message">
-                                            Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
-                                        </span>  
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-										<span class="avatar"><img src="/skin/static/img/avatar3.jpg" alt="Avatar" /></span>
-										<span class="header">
-											<span class="from">
-										    	Kate Ross
-										     </span>
-											<span class="time">
-										    	3 hours
-										    </span>
-										</span>
-                                        <span class="message">
-                                            Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
-                                        </span>  
-                                    </a>
-                                </li>
-								<li>
-                                    <a href="#">
-										<span class="avatar"><img src="/skin/static/img/avatar4.jpg" alt="Avatar" /></span>
-										<span class="header">
-											<span class="from">
-										    	Julie Blank
-										     </span>
-											<span class="time">
-										    	yesterday
-										    </span>
-										</span>
-                                        <span class="message">
-                                            Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
-                                        </span>  
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-										<span class="avatar"><img src="/skin/static/img/avatar5.jpg" alt="Avatar" /></span>
-										<span class="header">
-											<span class="from">
-										    	Jane Sanders
-										     </span>
-											<span class="time">
-										    	Jul 25, 2012
-										    </span>
-										</span>
-                                        <span class="message">
-                                            Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
-                                        </span>  
-                                    </a>
-                                </li>
-								<li>
-                            		<a class="dropdown-menu-sub-footer">View all messages</a>
-								</li>	
-							</ul>
-						</li>
-						<!-- end: Message Dropdown -->
-						<li>
-							<a class="btn" href="#">
-								<i class="halflings-icon white wrench"></i>
-							</a>
-						</li>
 						<!-- start: User Dropdown -->
 						<li class="dropdown">
 							<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
@@ -237,8 +77,7 @@
 								<span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu">
-								<li><a href="#"><i class="halflings-icon white user"></i> Profile</a></li>
-								<li><a href="./login.html"><i class="halflings-icon white off"></i> Logout</a></li>
+								<li><a href="#"><i class="halflings-icon white off"></i> Logout</a></li>
 							</ul>
 						</li>
 						<!-- end: User Dropdown -->
@@ -258,21 +97,14 @@
 			<div id="sidebar-left" class="span1">
 				<div class="nav-collapse sidebar-nav">
 					<ul class="nav nav-tabs nav-stacked main-menu">
-						<li class="active"><a href="./index.html"><i class="fa-icon-bar-chart"></i><span class="hidden-tablet"> Dashboard</span></a></li>	
-						<li><a href="./infrastructure.html"><i class="fa-icon-hdd"></i><span class="hidden-tablet"> Infrastructure</span></a></li>
-						<li><a href="./messages.html"><i class="fa-icon-envelope"></i><span class="hidden-tablet"> Messages</span></a></li>
-						<li><a href="./tasks.html"><i class="fa-icon-tasks"></i><span class="hidden-tablet"> Tasks</span></a></li>
-						<li><a href="./ui.html"><i class="fa-icon-eye-open"></i><span class="hidden-tablet"> UI Features</span></a></li>
-						<li><a href="./widgets.html"><i class="fa-icon-dashboard"></i><span class="hidden-tablet"> Widgets</span></a></li>
-						<li><a href="./form.html"><i class="fa-icon-edit"></i><span class="hidden-tablet"> Forms</span></a></li>
-						<li><a href="./chart.html"><i class="fa-icon-list-alt"></i><span class="hidden-tablet"> Charts</span></a></li>
-						<li><a href="./typography.html"><i class="fa-icon-font"></i><span class="hidden-tablet"> Typography</span></a></li>
-						<li><a href="./gallery.html"><i class="fa-icon-picture"></i><span class="hidden-tablet"> Gallery</span></a></li>
-						<li><a href="./table.html"><i class="fa-icon-align-justify"></i><span class="hidden-tablet"> Tables</span></a></li>
-						<li><a href="./calendar.html"><i class="fa-icon-calendar"></i><span class="hidden-tablet"> Calendar</span></a></li>
-						<li><a href="./file-manager.html"><i class="fa-icon-folder-open"></i><span class="hidden-tablet"> File Manager</span></a></li>
-						<li><a href="./icon.html"><i class="fa-icon-star"></i><span class="hidden-tablet"> Icons</span></a></li>
-						<li><a href="./login.html"><i class="fa-icon-lock"></i><span class="hidden-tablet"> Login Page</span></a></li>
+						<li><a href="/"><i class="fa-icon-bar-chart"></i><span class="hidden-tablet"> Overview</span></a></li>	
+						<li><a href="/hardware"><i class="fa-upload-alt"></i><span class="hidden-tablet"> Hardware</span></a></li>
+						<li><a href="/bans"><i class="fa-legal"></i><span class="hidden-tablet"> Ban Manager</span></a></li>
+						<li><a href="/tasks"><i class="fa-tasks"></i><span class="hidden-tablet"> Wunderlist</span></a></li>
+						<li><a href="/users"><i class="fa-user"></i><span class="hidden-tablet"> Users</span></a></li>
+						<li><a href="/shopping"><i class="fa-shopping-cart"></i><span class="hidden-tablet"> Shopping</span></a></li>
+						<li><a href="/notifications"><i class="fa-warning-sign"></i><span class="hidden-tablet"> Notifications</span></a></li>
+						<li><a href="/statistics"><i class="fa-icon-bar-chart"></i><span class="hidden-tablet"> Statistics</span></a></li>
 					</ul>
 				</div>
 			</div>
