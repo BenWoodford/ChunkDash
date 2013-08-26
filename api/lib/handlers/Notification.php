@@ -1,6 +1,10 @@
 <?php
 
 class Notification {
+	public static function stub() {
+		echo "Please use /api/notifications/list";
+	}
+
 	public static function getNotificationsFull($page = 0, $perpage = 25) {
 		$page = @intval($page);
 		$perpage = @intval($perpage);

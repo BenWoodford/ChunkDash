@@ -20,6 +20,7 @@ getApi()->get('/users/list/(\d+)/(\d+)', array('User', 'getUserList'), EpiApi::e
 //getApi()->post('/users/list/', array('User', 'getFilteredUserList'), EpiApi::external);
 //getApi()->post('/users/list/(\d+)', array('User', 'getFilteredUserList'), EpiApi::external);
 
+getRoute()->get('/notifications', array('Notification', 'stub'));
 getApi()->get('/notifications/full', array('Notification', 'getNotificationsFull'), EpiApi::external);
 getApi()->get('/notifications/full/(\d+)', array('Notification', 'getNotificationsFull'), EpiApi::external);
 getApi()->get('/notifications/full/(\d+)/(\d+)', array('Notification', 'getNotificationsFull'), EpiApi::external);

@@ -3,7 +3,7 @@
 class User {
 
 	public static function stub() {
-		echo "Please use /api/user/<username>/";
+		echo "Please use /api/user/<username>";
 	}
 
 	public static function getUser($user) {
