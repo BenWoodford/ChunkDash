@@ -118,4 +118,4 @@
 			</noscript>
 
 			<!-- start: Content -->
-			<div id="content" class="span11">
+			<div id="content"><div id="innercontent" class="span11">

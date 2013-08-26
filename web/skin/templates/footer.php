@@ -1,5 +1,5 @@
 					<!-- end: Content -->
-			</div><!--/#content.span10-->
+			</div><!--/#content.span10--></div>
 				</div><!--/fluid-row-->
 				
 		<div class="modal hide fade" id="myModal">
@@ -23,9 +23,7 @@
 				<span style="text-align:left;float:left">&copy; <a href="./index.html" target="_blank">creativeLabs</a> 2013</span>
 				<span class="hidden-phone" style="text-align:right;float:right">Powered by: <a href="#">Acme Dashboard</a></span>
 			</p>
-
 		</footer>
-				
 	</div><!--/.fluid-container-->
 
 	<!-- start: JavaScript-->
