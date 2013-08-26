@@ -38,7 +38,7 @@ function autoloader($class) {
 $libdirs = file_get_contents("lib/cfg/autoload.cfg");
 
 foreach(explode("\n", $libdirs) as $d) {
-    set_include_path(get_include_path() . PATH_SEPARATOR . __DIR__ . "/" . $d);
+    set_include_path(get_include_path() . PATH_SEPARATOR . getcwd() . "/" . $d);
 }
 
 spl_autoload_register('autoloader');
