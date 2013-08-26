@@ -15,6 +15,10 @@ function getNotifications(firstPoll) {
 }
 
 function setupNotifications() {
+
+}
+
+$(document).ready(function() {
 	if(window.webkitNotifications && window.webkitNotifications.checkPermission() > 0) {
 		$("#notificationList").append('<li><a id="enable_notifications" class="dropdown-menu-sub-footer">Enable Chrome Notifications</a></li>');
 		$("#notificationList").append('<li>Derp.</li>');
@@ -22,9 +26,7 @@ function setupNotifications() {
 			window.webkitNotifications.requestPermission();
 		});
 	}
-}
 
-$(document).ready(function() {
 	setupNotifications();
 	getNotifications();
 });
