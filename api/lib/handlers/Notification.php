@@ -17,7 +17,7 @@ class Notification {
 				$notifications[$k]['seen'] = true;
 			} else {
 				$notifications[$k]['seen'] = false;
-				getDatabase()->execute("INSERT INTO `notifications_seen` (`id`,`user`) VALUES (:id, :user)", array(':id' => $n['id'], ':user' => $user));
+				getDatabase()->execute("INSERT INTO `notifications_seen` (`nid`,`user`) VALUES (:id, :user)", array(':id' => $n['nid'], ':user' => $user));
 			}
 		}
 
