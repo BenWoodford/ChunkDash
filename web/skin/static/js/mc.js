@@ -43,7 +43,7 @@ $(document).ready(function() {
 	$("#sidemenu a.menu-item").click(function(e) {
 		e.preventDefault();
 		var page = $(this).data("page");
-		$("#content").load(page + " #content", function() {
+		$("#content").load(page + " #innercontent", function() {
 			$.getScript("/skin/static/js/pages/" + page + "/" + page + ".js");
 		});
 	}); 
