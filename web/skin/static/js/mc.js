@@ -39,4 +39,10 @@ function setupNotifications() {
 $(document).ready(function() {
 	setupNotifications();
 	getNotifications();
+
+	$("#sidemenu a.menu-item").click(function() {
+		$("#content").load($(this).attr('href').replace("/\//g", "") + " #content", function() {
+			$.getScript("/skin/static/js/pages/" + $(this).attr('href').replace("/\//g", "") + "/" + $(this).attr('href').replace("/\//g", "") + ".js");
+		}
+	})
 });
