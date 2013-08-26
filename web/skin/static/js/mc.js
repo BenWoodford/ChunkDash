@@ -8,7 +8,8 @@ function getNotifications(firstPoll) {
 	$.getJSON('/api/notifications/mini/' + $("#logged_in").text(), function(json, textStatus) {
 		$.each(json, function(index, val) {
 			if(!val.seen && window.webkitNotifications) {
-				window.webkitNotifications.createNotification("http://dangercove.github.io/html5-notifications/img/icon.png", val.title, val.text);
+				notification = window.webkitNotifications.createNotification("/skin/static/img/notificationicon.png", val.title, val.text);
+				notification.show();
 			}
 		});
 	});
