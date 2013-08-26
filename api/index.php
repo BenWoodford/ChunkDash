@@ -20,8 +20,8 @@ getApi()->get('/users/list/(\d+)/(\d+)', array('User', 'getUserList'), EpiApi::e
 //getApi()->post('/users/list/', array('User', 'getFilteredUserList'), EpiApi::external);
 //getApi()->post('/users/list/(\d+)', array('User', 'getFilteredUserList'), EpiApi::external);
 
-getApi()->get('/notifications/mini/', array('Notification', 'getNotificationsMini'));
-getApi()->get('/notifications/mini/([a-zA-Z0-9-_]+)@loadingchunks.net', array('Notification', 'getNotificationsMini'));
+getApi()->get('/notifications/mini', array('Notification', 'getNotificationsMini'), EpiApi::external);
+getApi()->get('/notifications/mini/([a-zA-Z0-9-_]+)@loadingchunks.net', array('Notification', 'getNotificationsMini'), EpiApi::external);
 
 getRoute()->get('/tasks', array('Task', 'stub'));
 getApi()->get('/tasks/list', array('Task', 'getTasks'), EpiApi::external);
