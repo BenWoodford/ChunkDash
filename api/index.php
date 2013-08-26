@@ -1,5 +1,6 @@
 <?php
 require_once("../global.php");
+require_once("lib/functions.php");
 
 Epi::init('route');
 Epi::init('api');
