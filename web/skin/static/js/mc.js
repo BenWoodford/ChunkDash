@@ -7,7 +7,20 @@ function getNotifications(firstPoll) {
 				notification.show();
 			}
 
-			$("#notificationsList li#view_all").before('<li class="noti" id="notification_' + val.notification_id + '"><a href="#">&nbsp;<i class="halflings-icon white comment"></i> <span class="message">' + val.title + '</span> <span class="time">' + val.ago + '</span></a></li>');
+			var icon = "info";
+
+			if(val.type == "kick")
+				icon = "warning-sign";
+			else if(val.type == "ban")
+				icon = "remove";
+			else if(val.type == "callstaff")
+				icon = "phone_alt";
+			else if(val.type == "mute")
+				icon = "volume-off";
+			else if(val.type == "jail")
+				icon = "align-justify";
+
+			$("#notificationsList li#view_all").before('<li class="noti" id="notification_' + val.notification_id + '"><a href="#">&nbsp;<i class="haflings-icon ' + icon + ' white"></i> <span class="message">' + val.title + '</span> <span class="time">' + val.ago + '</span></a></li>');
 		});
 	});
 }
