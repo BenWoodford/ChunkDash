@@ -49,7 +49,6 @@
 <body>
 		<div class="container-fluid">
 		<div class="row-fluid">
-					
 			<div class="row-fluid">
 				<div class="login-box">
 					<div class="icons">
@@ -57,33 +56,20 @@
 						<a href="#"><i class="halflings-icon cog"></i></a>
 					</div>
 					<h2>Login to your account</h2>
-					<form class="form-horizontal" action="index.html" method="post" />
+					<form class="form-horizontal" action="<?=$referrer?>" method="GET" />
 						<fieldset>
-							
-							<div class="input-prepend" title="Username">
-								<span class="add-on"><i class="halflings-icon user"></i></span>
-								<input class="input-large span10" name="username" id="username" type="text" placeholder="type username" />
-							</div>
-							<div class="clearfix"></div>
-
-							<div class="input-prepend" title="Password">
-								<span class="add-on"><i class="halflings-icon lock"></i></span>
-								<input class="input-large span10" name="password" id="password" type="password" placeholder="type password" />
-							</div>
-							<div class="clearfix"></div>
-							
-							<label class="remember" for="remember"><input type="checkbox" id="remember" />Remember me</label>
 
 							<div class="button-login">	
-								<button type="submit" class="btn btn-primary">Login</button>
+								<button type="submit" class="btn btn-primary">Login with Google Apps</button>
+							</div>
+							<div class="clearfix"></div>
+							
+							<div class="input-prepend" title="OpenID Provider">
+								<span class="add-on"><i class="halflings-cog cog"></i></span>
+								<input class="input-large span10" name="openid_identifier" id="username" type="text" readonly value="https://www.google.com/accounts/o8/id" />
 							</div>
 							<div class="clearfix"></div>
 					</form>
-					<hr />
-					<h3>Forgot Password?</h3>
-					<p>
-						No problem, <a href="#">click here</a> to get a new password.
-					</p>	
 				</fieldset></div><!--/span-->
 			</div><!--/row-->
 			
