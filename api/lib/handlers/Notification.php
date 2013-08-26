@@ -5,7 +5,7 @@ class Notification {
 		$page = @intval($page);
 		$perpage = @intval($perpage);
 
-		return getDatabase()->all("SELECT * FROM `notifications` ORDER BY `id` DESC LIMIT " . $page . "," . $perpage);
+		return getDatabase()->all("SELECT * FROM `notifications` ORDER BY `notification_id` DESC LIMIT " . $page . "," . $perpage);
 	}
 
 	public static function getNotificationsMini($user = null) {
