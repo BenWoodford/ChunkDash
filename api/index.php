@@ -20,6 +20,9 @@ getApi()->get('/users/list/(\d+)/(\d+)', array('User', 'getUserList'), EpiApi::e
 //getApi()->post('/users/list/', array('User', 'getFilteredUserList'), EpiApi::external);
 //getApi()->post('/users/list/(\d+)', array('User', 'getFilteredUserList'), EpiApi::external);
 
+getApi()->get('/notifications/full', array('Notification', 'getNotificationsFull'), EpiApi::external);
+getApi()->get('/notifications/full/(\d+)', array('Notification', 'getNotificationsFull'), EpiApi::external);
+getApi()->get('/notifications/full/(\d+)/(\d+)', array('Notification', 'getNotificationsFull'), EpiApi::external);
 getApi()->get('/notifications/mini', array('Notification', 'getNotificationsMini'), EpiApi::external);
 getApi()->get('/notifications/mini/([a-zA-Z0-9-_]+)@loadingchunks.net', array('Notification', 'getNotificationsMini'), EpiApi::external);
 
