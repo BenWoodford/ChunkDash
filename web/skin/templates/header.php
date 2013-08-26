@@ -96,15 +96,15 @@
 			<!-- start: Main Menu -->
 			<div id="sidebar-left" class="span1">
 				<div class="nav-collapse sidebar-nav">
-					<ul class="nav nav-tabs nav-stacked main-menu">
-						<li class="active"><a href="/"><i class="fa-icon-dashboard"></i><span class="hidden-tablet"> Overview</span></a></li>	
-						<li><a href="/hardware"><i class="fa-icon-upload-alt"></i><span class="hidden-tablet"> Hardware</span></a></li>
-						<li><a href="/bans"><i class="fa-icon-legal"></i><span class="hidden-tablet"> Ban Manager</span></a></li>
-						<li><a href="/tasks"><i class="fa-icon-tasks"></i><span class="hidden-tablet"> Wunderlist</span></a></li>
-						<li><a href="/users"><i class="fa-icon-user"></i><span class="hidden-tablet"> Users</span></a></li>
-						<li><a href="/shopping"><i class="fa-icon-shopping-cart"></i><span class="hidden-tablet"> Shopping</span></a></li>
-						<li><a href="/notifications"><i class="fa-icon-warning-sign"></i><span class="hidden-tablet"> Notifications</span></a></li>
-						<li><a href="/statistics"><i class="fa-icon-bar-chart"></i><span class="hidden-tablet"> Statistics</span></a></li>
+					<ul id="sidemenu" class="nav nav-tabs nav-stacked main-menu">
+						<li class="active"><a href="/" data-page="overview" class="menu-item"><i class="fa-icon-dashboard"></i><span class="hidden-tablet"> Overview</span></a></li>	
+						<li><a href="/hardware" data-page="hardware" class="menu-item"><i class="fa-icon-upload-alt"></i><span class="hidden-tablet"> Hardware</span></a></li>
+						<li><a href="/bans" data-page="bans" class="menu-item"><i class="fa-icon-legal"></i><span class="hidden-tablet"> Ban Manager</span></a></li>
+						<li><a href="/tasks" data-page="tasks" class="menu-item"><i class="fa-icon-tasks"></i><span class="hidden-tablet"> Wunderlist</span></a></li>
+						<li><a href="/users" data-page="users" class="menu-item"><i class="fa-icon-user"></i><span class="hidden-tablet"> Users</span></a></li>
+						<li><a href="/shopping" data-page="shopping" class="menu-item"><i class="fa-icon-shopping-cart"></i><span class="hidden-tablet"> Shopping</span></a></li>
+						<li><a href="/notifications" data-page="notifications" class="menu-item"><i class="fa-icon-warning-sign"></i><span class="hidden-tablet"> Notifications</span></a></li>
+						<li><a href="/statistics" data-page="statistics" class="menu-item"><i class="fa-icon-bar-chart"></i><span class="hidden-tablet"> Statistics</span></a></li>
 					</ul>
 				</div>
 			</div>
