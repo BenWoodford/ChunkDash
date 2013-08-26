@@ -15,8 +15,11 @@ function getNotifications(firstPoll) {
 }
 
 function setupNotifications() {
-	if(window.webkitNotifications && window.webkitNotifications.checkPermission() !== 0) {
-		window.webkitNotifications.requestPermission();
+	if(window.webkitNotifications && window.webkitNotifications.checkPermission() > 0) {
+		$("#notificationList").append('<li><a id="enable_notifications" class="dropdown-menu-sub-footer">Enable Chrome Notifications</a></li>');
+		$("#enable_notifications").click(function( {
+			window.webkitNotifications.requestPermission();
+		});
 	}
 }
 
