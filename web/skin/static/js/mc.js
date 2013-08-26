@@ -1,16 +1,13 @@
-/*								<li>
-                                    <a href="#">
-										+ <i class="halflings-icon white comment"></i> <span class="message">New comment</span> <span class="time">yesterday</span> 
-                                    </a>
-                                </li>*/
-
 function getNotifications(firstPoll) {
 	$.getJSON('/api/notifications/mini/' + $("#logged_in").text(), function(json, textStatus) {
+		$("#notificationsList li.notification").remove();
 		$.each(json, function(index, val) {
 			if(!val.seen && window.webkitNotifications) {
 				notification = window.webkitNotifications.createNotification("/skin/static/img/notificationicon.png", val.title, val.text);
 				notification.show();
 			}
+
+			$("#notificationsList li.dropdown-menu-sub-footer:first-child").before('<li class="notification" id="notification_' + val.notification_id + '"><a href="#">&nbsp;<i class="halflings-icon white comment"></i> <span class="message">' + val.title + '</span> <span class="time">' + val.ago + '</span></a></li>');
 		});
 	});
 }
