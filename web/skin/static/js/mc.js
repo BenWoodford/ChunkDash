@@ -4,14 +4,23 @@
                                     </a>
                                 </li>*/
 
-function getNotifications() {
+function getNotifications(firstPoll) {
 	$.getJSON('/api/notifications/mini/' + $("#logged_in").text(), function(json, textStatus) {
 		$.each(json, function(index, val) {
-			console.log(val);
+			if(!val.seen && window.webkitNotifications) {
+				window.webkitNotifications.createNotification("icon.png", val.title, val.text);
+			}
 		});
 	});
 }
 
+function setupNotifications() {
+	if(window.webkitNotifications && window.webkitNotifications.checkPermission() !== 0) {
+		window.webkitNotifications.requestPermission();
+	}
+}
+
 $(document).ready(function() {
+	setupNotifications();
 	getNotifications();
 });
