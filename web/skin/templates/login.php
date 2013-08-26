@@ -1,3 +1,8 @@
+<?php
+echo "hi.";
+if(false) {
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -132,3 +137,4 @@
 	
 </body>
 </html>
+<?php } ?>
