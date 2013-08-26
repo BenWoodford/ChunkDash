@@ -7,4 +7,5 @@ A	Wunderlist read-only?
 	Purchase History
 	Infrastructure
 A	User Info
+	Analytics
 	
