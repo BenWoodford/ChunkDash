@@ -1,4 +1,4 @@
-function getNotifications(firstPoll) {
+function getNotifications() {
 	$.getJSON('/api/notifications/mini/' + $("#logged_in").text(), function(json, textStatus) {
 		$("#notificationsList li.noti").remove();
 		$.each(json, function(index, val) {
@@ -23,6 +23,8 @@ function getNotifications(firstPoll) {
 			$("#notificationsList li#view_all").before('<li class="noti ' + val.level + '" id="notification_' + val.notification_id + '"><a href="#">&nbsp;<i class="halflings-icon ' + icon + ' white"></i> <span class="message">' + val.title + '</span> <span class="time">' + val.ago + '</span></a></li>');
 		});
 	});
+
+	setTimeout("getNotifications", 10000);
 }
 
 function setupNotifications() {
