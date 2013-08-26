@@ -15,10 +15,10 @@
 	<!-- end: Mobile Specific -->
 	
 	<!-- start: CSS -->
-	<link id="bootstrap-style" href="./css/bootstrap.css" rel="stylesheet" />
-	<link href="./css/bootstrap-responsive.css" rel="stylesheet" />
-	<link id="base-style" href="./css/style.css" rel="stylesheet" />
-	<link id="base-style-responsive" href="./css/style-responsive.css" rel="stylesheet" />
+	<link id="bootstrap-style" href="/skin/static/css/bootstrap.css" rel="stylesheet" />
+	<link href="/skin/static/css/bootstrap-responsive.css" rel="stylesheet" />
+	<link id="base-style" href="/skin/static/css/style.css" rel="stylesheet" />
+	<link id="base-style-responsive" href="/skin/static/css/style-responsive.css" rel="stylesheet" />
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css' />
 	
 	<!-- end: CSS -->
@@ -35,7 +35,7 @@
 	<![endif]-->
 		
 	<!-- start: Favicon -->
-	<link rel="shortcut icon" href="./img/favicon.ico" />
+	<link rel="shortcut icon" href="/skin/static/img/favicon.ico" />
 	<!-- end: Favicon -->
 	
 		
@@ -192,7 +192,7 @@
 								</li>	
                             	<li>
                                     <a href="#">
-										<span class="avatar"><img src="./img/avatar.jpg" alt="Avatar" /></span>
+										<span class="avatar"><img src="/skin/static/img/avatar.jpg" alt="Avatar" /></span>
 										<span class="header">
 											<span class="from">
 										    	Łukasz Holeczek
@@ -208,7 +208,7 @@
                                 </li>
                                 <li>
                                     <a href="#">
-										<span class="avatar"><img src="./img/avatar2.jpg" alt="Avatar" /></span>
+										<span class="avatar"><img src="/skin/static/img/avatar2.jpg" alt="Avatar" /></span>
 										<span class="header">
 											<span class="from">
 										    	Megan Abott
@@ -224,7 +224,7 @@
                                 </li>
                                 <li>
                                     <a href="#">
-										<span class="avatar"><img src="./img/avatar3.jpg" alt="Avatar" /></span>
+										<span class="avatar"><img src="/skin/static/img/avatar3.jpg" alt="Avatar" /></span>
 										<span class="header">
 											<span class="from">
 										    	Kate Ross
@@ -240,7 +240,7 @@
                                 </li>
 								<li>
                                     <a href="#">
-										<span class="avatar"><img src="./img/avatar4.jpg" alt="Avatar" /></span>
+										<span class="avatar"><img src="/skin/static/img/avatar4.jpg" alt="Avatar" /></span>
 										<span class="header">
 											<span class="from">
 										    	Julie Blank
@@ -256,7 +256,7 @@
                                 </li>
                                 <li>
                                     <a href="#">
-										<span class="avatar"><img src="./img/avatar5.jpg" alt="Avatar" /></span>
+										<span class="avatar"><img src="/skin/static/img/avatar5.jpg" alt="Avatar" /></span>
 										<span class="header">
 											<span class="from">
 										    	Jane Sanders
