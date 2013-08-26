@@ -25,7 +25,7 @@ class Notification {
 			$notifications[$k]['ago'] = ago($n['time']);
 
 			if($user != null) {
-				$seen = getDatabase()->one("SELECT COUNT(*) as seen FROM `notifications_seen` WHERE `user` = :user LIMIT 1", array(':user' => $user));
+				$seen = getDatabase()->one("SELECT COUNT(*) as seen FROM `notifications_seen` WHERE `user` = :user AND `notification_id` = :id LIMIT 1", array(':user' => $user, ':id' => $n['notification_id']));
 				if($seen['seen'] > 0) {
 					$notifications[$k]['seen'] = true;
 				} else {
