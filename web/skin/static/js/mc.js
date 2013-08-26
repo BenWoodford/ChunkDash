@@ -7,7 +7,7 @@ function getNotifications(firstPoll) {
 				notification.show();
 			}
 
-			var icon = "info";
+			var icon = "info-sign";
 
 			if(val.type == "kick")
 				icon = "warning-sign";
@@ -20,7 +20,7 @@ function getNotifications(firstPoll) {
 			else if(val.type == "jail")
 				icon = "align-justify";
 
-			$("#notificationsList li#view_all").before('<li class="noti" id="notification_' + val.notification_id + '"><a href="#">&nbsp;<i class="haflings-icon ' + icon + ' white"></i> <span class="message">' + val.title + '</span> <span class="time">' + val.ago + '</span></a></li>');
+			$("#notificationsList li#view_all").before('<li class="noti ' + val.level + '" id="notification_' + val.notification_id + '"><a href="#">&nbsp;<i class="haflings-icon ' + icon + ' white"></i> <span class="message">' + val.title + '</span> <span class="time">' + val.ago + '</span></a></li>');
 		});
 	});
 }
