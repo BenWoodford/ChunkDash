@@ -4,10 +4,8 @@
 	
 	<!-- start: Meta -->
 	<meta charset="utf-8" />
-	<title>ACME Dashboard - Perfect Bootstrap Admin Template</title>
-	<meta name="description" content="ACME Dashboard Bootstrap Admin Template." />
-	<meta name="author" content="Łukasz Holeczek" />
-	<meta name="keyword" content="ACME, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina" />
+	<title>LoadingChunks Staff Dashboard</title>
+	<meta name="author" content="Ben Woodford" />
 	<!-- end: Meta -->
 	
 	<!-- start: Mobile Specific -->
