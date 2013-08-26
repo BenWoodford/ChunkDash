@@ -97,7 +97,7 @@
 			<div id="sidebar-left" class="span1">
 				<div class="nav-collapse sidebar-nav">
 					<ul class="nav nav-tabs nav-stacked main-menu">
-						<li class="active"><a href="/"><i class="fa-icon-info"></i><span class="hidden-tablet"> Overview</span></a></li>	
+						<li class="active"><a href="/"><i class="fa-icon-dashboard"></i><span class="hidden-tablet"> Overview</span></a></li>	
 						<li><a href="/hardware"><i class="fa-icon-upload-alt"></i><span class="hidden-tablet"> Hardware</span></a></li>
 						<li><a href="/bans"><i class="fa-icon-legal"></i><span class="hidden-tablet"> Ban Manager</span></a></li>
 						<li><a href="/tasks"><i class="fa-icon-tasks"></i><span class="hidden-tablet"> Wunderlist</span></a></li>
