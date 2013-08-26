@@ -51,7 +51,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</a>
-				<a class="brand" href="./index.html"><span>Acme, Inc</span></a>
+				<a class="brand" href="/"><span>Staff Dashboard</span></a>
 								
 				<!-- start: Header Menu -->
 				<div class="nav-no-collapse header-nav">
@@ -62,7 +62,7 @@
 							</a>
 							<ul class="dropdown-menu notifications">
 								<li>
-									<span class="dropdown-menu-title">You have 11 notifications</span>
+									<span class="dropdown-menu-title">You have <span id="notification_count">0</span> notifications</span>
 								</li>	
                             	<li>
                                     <a href="#">
