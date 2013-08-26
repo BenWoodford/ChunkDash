@@ -9,7 +9,7 @@ class Notification {
 	}
 
 	public static function getNotificationsMini($user = null) {
-		$notifications = getDatabase()->all("SELECT `id`,`title`,`text`,`level`,`type` FROM `notifications` ORDER BY `id` DESC LIMTI 10");
+		$notifications = getDatabase()->all("SELECT `id`,`title`,`text`,`level`,`type` FROM `notifications` ORDER BY `id` DESC LIMIT 10");
 
 		foreach($notifications as $k=>$n) {
 			$seen = getDatabase()->one("SELECT COUNT(*) as seen FROM `notifications_seen` WHERE `user` = :user LIMIT 1", array(':user' => $user));
