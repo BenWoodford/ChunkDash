@@ -3085,9 +3085,6 @@ ul.messagesList li span.date {
 }
 
 .task .desc {
-	display: inline-block;
-	width: 75%;
-	padding: 10px 10px;
 	font-size: 12px;
 }
 
@@ -3097,9 +3094,6 @@ ul.messagesList li span.date {
 }
 
 .task .time {
-	display: inline-block;
-	float: right;
-	width: 15%;
 	padding: 10px 10px 10px 0px;
 	font-size: 12px;
 	text-align: right;
