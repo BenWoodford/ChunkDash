@@ -83,8 +83,8 @@ class User {
 		return array_map(array("User", "regionFormat"), getDatabase()->all("SELECT * FROM `regions` WHERE FIND_IN_SET(:user, owners) AND `id` LIKE 'plot_%'", array(':user' => $user)));
 	}
 
-	public static function getUserList($page = 0, $perpage = 25) {
-		$page = @intval($page);
+	public static function getUserList($page = 1, $perpage = 25) {
+		$page = @intval($page) - 1;
 		$perpage = @intval($perpage);
 
 		$userdatums = getDatabase()->all("SELECT * FROM `basic` ORDER BY `name` ASC LIMIT " . $page . "," . $perpage);
@@ -108,8 +108,8 @@ class User {
 		return $arr;
 	}
 
-	public static function getFilteredUserList($page = 0, $perpage = 25) {
-		$page = @intval($page);
+	public static function getFilteredUserList($page = 1, $perpage = 25) {
+		$page = @intval($page) - 1;
 		$perpage = @intval($perpage);
 
 		$userdatums = getDatabase()->all("SELECT * FROM `basic` ORDER BY `name` ASC LIMIT " . $page . "," . $perpage);

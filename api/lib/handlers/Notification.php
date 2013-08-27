@@ -5,14 +5,14 @@ class Notification {
 		echo "Please use /api/notifications/list";
 	}
 
-	public static function getNotificationsFull($page = 0, $perpage = 25) {
-		$page = @intval($page);
+	public static function getNotificationsFull($page = 1, $perpage = 25) {
+		$page = @intval($page) - 1;
 		$perpage = @intval($perpage);
 
 		$notifications = getDatabase()->all("SELECT * FROM `notifications` ORDER BY `notification_id` DESC LIMIT " . $page . "," . $perpage);
 
 		foreach($notifications as $k=>$n) {
-			$notifications[$k]['ago'] = ago($n['time']);
+			$notifications[$k]['ago'] = ago($n['time'], true, " ago");
 		}
 
 		return $notifications;

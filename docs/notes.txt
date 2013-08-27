@@ -14,3 +14,6 @@ Notifications
 	Keep checking
 	Keyed to user's email
 	Append to top of notifications list (max: 10)
+
+Notifications in format of Messages
+
