@@ -8,7 +8,7 @@
 
 		</div>
 
-		<div class="priority low"><span>high priority</span></div>
+		<div class="priority low"><span>normal priority</span></div>
 
 		<div id="tasksNormalPriority">
 

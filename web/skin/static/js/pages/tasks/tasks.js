@@ -26,6 +26,6 @@ $.getJSON('/api/tasks/list', function(json, textStatus) {
 		if(val.note == null)
 			val.note = "";
 
-		$(cat).append('<div class="task ' + pclass + '"><div class="desc"><div class="title">' + val.title + '</div><div>' + val.note + '</div></div><div class="time"><div class="date">' + due + '</div><div>created ' + val.created_ago + '</div></div>');
+		$(cat).append('<div class="task ' + pclass + '"><div class="desc span9"><div class="title">' + val.title + '</div><div>' + val.note + '</div></div><div class="time span3"><div class="date">' + due + '</div><div>created ' + val.created_ago + '</div></div>');
 	});
 });
