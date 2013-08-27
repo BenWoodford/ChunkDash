@@ -32,7 +32,7 @@ class Task {
 			$format = "F j, Y";
 			foreach($tasks['tasks'] as $k=>$t) {
 				$tasks['tasks'][$k]['created_readable'] = (isset($t['created_at']) ? date($format, strtotime($t['created_at'])) : null);
-				$tasks['tasks'][$k]['created_ago'] = (isset($t['created_at']) ? ago(strtotime($t['created_at'])) : null);
+				$tasks['tasks'][$k]['created_ago'] = (isset($t['created_at']) ? ago(strtotime($t['created_at']), true, " ago") : null);
 
 				$tasks['tasks'][$k]['due_readable'] = (isset($t['due_date']) ? date($format, strtotime($t['due_date'])) : null);
 				$tasks['tasks'][$k]['deleted_readable'] = (isset($t['deleted_at']) ? date($format, strtotime($t['deleted_at'])) : null);

@@ -1,5 +1,5 @@
 <?php
-function ago($time)
+function ago($time, $plural = false, $suffix = "")
 {
 	$periods = array("sec", "min", "hour", "day", "week", "month", "year", "decade");
 	$lengths = array("60","60","24","7","4.35","12","10");
@@ -32,6 +32,10 @@ function ago($time)
 		}
 	}
 
-	return "$difference $periods[$j]";
+	if($difference > 1 && $plural) {
+		$suffix = "s" . $suffix;
+	}
+
+	return $difference . " " . $periods[$j] . $suffix;
 }
 ?>
