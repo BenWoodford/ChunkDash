@@ -28,7 +28,7 @@ class Task {
 			return $response;
 
 		try {
-			$tasks = @Task::$wunderlist->getTasksByList(WLLIST, false);
+			$tasks = @Task::$wunderlist->getTasksByList(WLLIST, true);
 			return $tasks;
 		} catch(Exception $e) {
 			return array(
