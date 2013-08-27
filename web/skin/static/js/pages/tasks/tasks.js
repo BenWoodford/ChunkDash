@@ -28,21 +28,27 @@ $.getJSON('/api/tasks/list', function(json, textStatus) {
 
 		var subhtml = "";
 
-		$.each(val.subtasks, function(sindex, sval) {
-			 var tmp = "";
+		if(val.subtasks.length > 0) {
 
-			 if(sval.completed_by_id != null) {
-			 	tmp = "<strike>" + sval.title + "</strike>";
-			 } else {
-			 	tmp = sval.title;
-			 }
+			subhtml = "<p><small>Sub-tasks: ";
 
-			 subhtml += tmp + ", ";
-		});
+			$.each(val.subtasks, function(sindex, sval) {
+				var tmp = "";
 
-		if(subhtml.charAt(subhtml.length - 1) == ',')
-			subhtml.slice(0, -1);
+			 	if(sval.completed_by_id != null) {
+					tmp = "<strike>" + sval.title + "</strike>";
+			 	} else {
+					tmp = sval.title;
+			 	}
 
-		$(cat).append('<div id="task_' + val.id + '" data-task-id="' + val.id + '" class="task ' + pclass + ' row-fluid"><div class="desc span8"><div class="title"><a target="_blank" href="https://www.wunderlist.com/#/tasks/' + val.id + '">' + val.title + '</a></div><div><p>' + val.note + '</p><p><small>' + subhtml + '</small></p></div></div><div class="time span4"><div class="date">' + due + '</div><div>created ' + val.created_ago + '</div></div>');
+				subhtml += tmp + ", ";
+			});
+			subhtml += '</small></p>';
+
+			if(subhtml.charAt(subhtml.length - 1) == ',')
+				subhtml.slice(0, -1);
+		}
+
+		$(cat).append('<div id="task_' + val.id + '" data-task-id="' + val.id + '" class="task ' + pclass + ' row-fluid"><div class="desc span8"><div class="title"><a target="_blank" href="https://www.wunderlist.com/#/tasks/' + val.id + '">' + val.title + '</a></div><div><p>' + val.note + '</p>' + subhtml + '</div></div><div class="time span4"><div class="date">' + due + '</div><div>created ' + val.created_ago + '</div></div>');
 	});
 });
