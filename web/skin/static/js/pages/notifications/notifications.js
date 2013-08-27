@@ -6,4 +6,4 @@ function loadNotifications(page) {
 	});
 }
 
-loadNotifications(parseIn($("#page_identifier").text()));
+loadNotifications(parseInt($("#page_identifier").text()));
