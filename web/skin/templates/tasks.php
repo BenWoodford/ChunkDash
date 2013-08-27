@@ -4,11 +4,21 @@
 
 		<div class="priority high"><span>high priority</span></div>
 
-		<div id="tasks_high">
+		<div id="tasksHighPriority">
 
 		</div>
 
-		<div id="tasks_normal">
+		<div class="priority low"><span>high priority</span></div>
+
+		<div id="tasksNormalPriority">
+
+		</div>
+	</div>
+
+	<div class="span5">
+		<div class="priority medium"><high>completed tasks</span></div>
+
+		<div id="tasksCompleted">
 
 		</div>
 	</div>
