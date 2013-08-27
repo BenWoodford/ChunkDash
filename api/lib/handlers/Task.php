@@ -30,14 +30,14 @@ class Task {
 		try {
 			$tasks = @Task::$wunderlist->getTasksByList(WLLIST, true);
 			$format = "F j, Y";
-			foreach($tasks as $k=>$t) {
-				$tasks[$k]['created_readable'] = (isset($t['created_at']) ? date($format, strtotime($t['created_at'])) : null);
-				$tasks[$k]['created_ago'] = (isset($t['created_at']) ? ago(strtotime($t['created_at'])) : null);
+			foreach($tasks as $k=>$t['tasks']) {
+				$tasks['tasks'][$k]['created_readable'] = (isset($t['created_at']) ? date($format, strtotime($t['created_at'])) : null);
+				$tasks['tasks'][$k]['created_ago'] = (isset($t['created_at']) ? ago(strtotime($t['created_at'])) : null);
 
-				$tasks[$k]['due_readable'] = (isset($t['due_date']) ? date($format, strtotime($t['due_date'])) : null);
-				$tasks[$k]['deleted_readable'] = (isset($t['deleted_at']) ? date($format, strtotime($t['deleted_at'])) : null);
-				$tasks[$k]['completed_readable'] = (isset($t['completed_at']) ? date($format, strtotime($t['completed_at'])) : null);
-				$tasks[$k]['updated_readable'] = (isset($t['updated_at']) ? date($format, strtotime($t['updated_at'])) : null);
+				$tasks['tasks'][$k]['due_readable'] = (isset($t['due_date']) ? date($format, strtotime($t['due_date'])) : null);
+				$tasks['tasks'][$k]['deleted_readable'] = (isset($t['deleted_at']) ? date($format, strtotime($t['deleted_at'])) : null);
+				$tasks['tasks'][$k]['completed_readable'] = (isset($t['completed_at']) ? date($format, strtotime($t['completed_at'])) : null);
+				$tasks['tasks'][$k]['updated_readable'] = (isset($t['updated_at']) ? date($format, strtotime($t['updated_at'])) : null);
 			}
 
 			return $tasks;
