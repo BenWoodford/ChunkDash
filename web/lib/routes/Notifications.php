@@ -1,6 +1,6 @@
 <?php
 
-class Tasks extends Router {
+class Notifications extends Router {
 	public static function stub($page = 1) {
 		parent::start();
 
