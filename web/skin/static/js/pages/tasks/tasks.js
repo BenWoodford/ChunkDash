@@ -32,7 +32,9 @@ $.getJSON('/api/tasks/list', function(json, textStatus) {
 			 var tmp = "";
 
 			 if(sval.completed_by_id != null) {
-			 	tmp += "<strike>" + sval.title + "</strike>";
+			 	tmp = "<strike>" + sval.title + "</strike>";
+			 } else {
+			 	tmp = sval.title;
 			 }
 
 			 subhtml += tmp + ", ";
