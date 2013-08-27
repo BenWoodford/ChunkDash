@@ -30,7 +30,7 @@ class Task {
 		try {
 			$tasks = @Task::$wunderlist->getTasksByList(WLLIST, true);
 			$format = "F j, Y";
-			foreach($tasks as $k=>$t['tasks']) {
+			foreach($tasks['tasks'] as $k=>$t) {
 				$tasks['tasks'][$k]['created_readable'] = (isset($t['created_at']) ? date($format, strtotime($t['created_at'])) : null);
 				$tasks['tasks'][$k]['created_ago'] = (isset($t['created_at']) ? ago(strtotime($t['created_at'])) : null);
 
