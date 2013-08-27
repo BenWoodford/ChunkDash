@@ -3,7 +3,7 @@ $.getJSON('/api/tasks/list', function(json, textStatus) {
 		var cat;
 		var pclass;
 
-		if(val.completed_by_id != null) {
+		if(val.completed_by_id == null) {
 			if(val.starred) {
 				cat = $("#tasksHighPriority");
 				pclass = "high";
