@@ -16,7 +16,7 @@
 	</div>
 
 	<div class="span5">
-		<div class="priority medium"><high>completed tasks</span></div>
+		<div class="priority medium"><span>completed tasks</span></div>
 
 		<div id="tasksCompleted">
 
