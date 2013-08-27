@@ -3085,6 +3085,7 @@ ul.messagesList li span.date {
 }
 
 .task .desc {
+	padding: 10px 10px;
 	font-size: 12px;
 }
 
