@@ -16,6 +16,13 @@ $.getJSON('/api/tasks/list', function(json, textStatus) {
 			pclass = "medium";
 		}
 
-		cat.append('<div class="task ' + pclass + '"><div class="desc"><div class="title">' + val.title + '</div><div>' + val.note + '</div></div><div class="time"><div class="date">' + val.clean_date + '</div><div> ' + val.ago + '</div></div>');
+		var due;
+
+		if(val.due_readable == null)
+			due = "whenever";
+		else
+			due = val.due_readable;
+
+		$(cat).append('<div class="task ' + pclass + '"><div class="desc"><div class="title">' + val.title + '</div><div>' + val.note + '</div></div><div class="time"><div class="date">' + due + '</div><div>created ' + val.ago + '</div></div>');
 	});
 });
