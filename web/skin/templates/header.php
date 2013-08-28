@@ -66,7 +66,7 @@
 									<span class="dropdown-menu-title">Recent Notifications</span>
 								</li>
                                 <li id="view_all">
-                            		<a class="dropdown-menu-sub-footer">View all notifications</a>
+                            		<a id="viewAllNotifications" class="dropdown-menu-sub-footer">View all notifications</a>
 								</li>
 							</ul>
 						</li>

@@ -50,5 +50,9 @@ $(document).ready(function() {
 			$("#content #innercontent").fadeIn();
 			$.getScript("/skin/static/js/pages/" + page + "/" + page + ".js");
 		});
-	}); 
+	});
+
+	$("#viewAllNotifications").click(function() {
+		$("#sidemenu:(notifications)").click();
+	});
 });
