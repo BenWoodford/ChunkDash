@@ -15,6 +15,10 @@ function loadNotifications(page) {
 				$(view).find("#notificationType").text(json.type);
 			});
 		});
+
+		if(("#notificationsList .notiBig").length > 0) {
+			$("#notificationsList .notiBig").first().click();
+		}
 	});
 }
 
