@@ -53,6 +53,6 @@ $(document).ready(function() {
 	});
 
 	$("#viewAllNotifications").click(function() {
-		$("#sidemenu:(notifications)").click();
+		$("#sidemenu:data(notifications)").click();
 	});
 });
