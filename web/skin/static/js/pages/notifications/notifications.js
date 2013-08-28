@@ -6,7 +6,7 @@ function loadNotifications(page) {
 
 		$("#notificationsList .notiBig").click(function() {
 			$.getJSON('/api/notifications/single/' + $(this).data("notification-id"), function(json, textStatus) {
-				var view = $("#notificationVew");
+				var view = $("#notificationView");
 
 				$(view).find("#notificationTitle").text(json.title);
 				$(view).find("#notificationText").text(json.text);
