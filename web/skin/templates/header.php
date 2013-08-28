@@ -61,7 +61,7 @@
 							<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
 								<i class="halflings-icon white warning-sign"></i>
 							</a>
-							<ul class="dropdown-menu notifications" id="notificationsList">
+							<ul class="dropdown-menu notifications" id="notificationsListMini">
 								<li>
 									<span class="dropdown-menu-title">Recent Notifications</span>
 								</li>
