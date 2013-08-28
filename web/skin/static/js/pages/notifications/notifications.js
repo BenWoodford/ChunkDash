@@ -5,7 +5,7 @@ function loadNotifications(page) {
 		});
 	});
 
-	$("#messagesList .message").click(function() {
+	$("#notificationsList .notiBig").click(function() {
 		$.getJSON('/api/notifications/single/' + $(this).data("notification-id"), function(json, textStatus) {
 			var view = $("#notificationVew");
 
