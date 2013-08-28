@@ -27,6 +27,7 @@ getApi()->get('/notifications/full/(\d+)/?', array('Notification', 'getNotificat
 getApi()->get('/notifications/full/(\d+)/(\d+)/?', array('Notification', 'getNotificationsFull'), EpiApi::external);
 getApi()->get('/notifications/mini/?', array('Notification', 'getNotificationsMini'), EpiApi::external);
 getApi()->get('/notifications/mini/([a-zA-Z0-9-_]+)@loadingchunks.net/?', array('Notification', 'getNotificationsMini'), EpiApi::external);
+getApi()->get('/notifications/single/(\d+)/?', array('Notification', 'getNotificationSingle'), EpiApi::external);
 
 getRoute()->get('/tasks/?', array('Task', 'stub'));
 getApi()->get('/tasks/list/?', array('Task', 'getTasks'), EpiApi::external);

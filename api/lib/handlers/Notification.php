@@ -13,9 +13,27 @@ class Notification {
 
 		foreach($notifications as $k=>$n) {
 			$notifications[$k]['ago'] = ago($n['time'], true, " ago");
+
+			if(date('Ymd') == date('Ymd', $n['time']))
+				$notifications[$k]['cleantime'] = date("\T\o\d\a\y, g:i A", $n['time']);
+			else
+				$notifications[$k]['cleantime'] = date("F j, g:i A", $n['time']);
 		}
 
 		return $notifications;
+	}
+
+	public static function getNotificationSingle($id) {
+		$notification = getDatabase()->one("SELECT * FROM `notifications` WHERE `notification_id` = :id LIMIT 1", array(':id' => $id));
+
+		$notification['ago'] = ago($notification['time'], true, " ago");
+
+		if(date('Ymd') == date('Ymd', $notification['time']))
+			$notification['cleantime'] = date("\T\o\d\a\y, g:i A", $notification['time']);
+		else
+			$notification['cleantime'] = date("F j, g:i A", $notification['time']);
+
+		return $notification;
 	}
 
 	public static function getNotificationsMini($user = null) {
