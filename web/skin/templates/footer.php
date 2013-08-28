@@ -27,9 +27,9 @@
 	</div><!--/.fluid-container-->
 
 	<!-- start: JavaScript-->
-
 	<script src="/skin/static/js/jquery-1.7.2.min.js"></script>
 	<script src="/skin/static/js/jquery-ui-1.8.21.custom.min.js"></script>
+	<script src="/skin/static/js/getScriptFix.js"></script>
 	<script src="/skin/static/js/modernizr.js"></script>
 	<script src="/skin/static/js/bootstrap.js"></script>
 	<script src="/skin/static/js/jquery.cookie.js"></script>
