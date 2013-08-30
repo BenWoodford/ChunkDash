@@ -58,7 +58,7 @@
 	<script src="/skin/static/js/custom.js"></script>
 	<script src="/skin/static/js/mc.js"></script>
 
-	<?php if(isset($footer_include)) { echo $footer_include; } ?>
+<?php if(isset($footer_include)) { echo $footer_include; } ?>
 	<!-- end: JavaScript-->
 </body>
 </html>
