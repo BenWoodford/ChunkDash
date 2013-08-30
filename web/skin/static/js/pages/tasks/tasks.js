@@ -6,7 +6,10 @@ $(document).ready(function() {
 		}
 
 		$(".loadingbar").fadeOut('slow', function() { $(this).remove(); });
-		$("#tasksHighPriority, #tasksNormalPriority, #tasksCompleted").slideUp();
+		$("#tasksHighPriority, #tasksNormalPriority, #tasksCompleted").each(function() {
+			var ratio = 1 / $(this).ignorantHeight();
+			$(this).slideDown(1000/ratio);
+		});
 
 		$.each(json.tasks, function(index, val) {
 			var cat;
