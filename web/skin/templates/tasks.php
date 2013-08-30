@@ -5,13 +5,13 @@
 		<div class="priority high"><span>high priority</span></div>
 
 		<div id="tasksHighPriority">
-
+			<div class="loadingbar"></div>
 		</div>
 
 		<div class="priority low"><span>normal priority</span></div>
 
 		<div id="tasksNormalPriority">
-
+			<div class="loadingbar"></div>
 		</div>
 	</div>
 
@@ -19,7 +19,7 @@
 		<div class="priority medium"><span>completed tasks</span></div>
 
 		<div id="tasksCompleted">
-
+			<div class="loadingbar"></div>
 		</div>
 	</div>
 </div>
