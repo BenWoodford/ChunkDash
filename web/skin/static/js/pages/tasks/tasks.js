@@ -6,10 +6,7 @@ $(document).ready(function() {
 		}
 
 		$(".loadingbar").fadeOut('slow', function() { $(this).remove(); });
-		$("#tasksHighPriority, #tasksNormalPriority, #tasksCompleted").each(function() {
-			var ratio = 1 / $(this).ignorantHeight();
-			$(this).slideDown(1000/ratio);
-		});
+		$("#tasksHighPriority, #tasksNormalPriority, #tasksCompleted").slideUp();
 
 		$.each(json.tasks, function(index, val) {
 			var cat;
@@ -64,6 +61,9 @@ $(document).ready(function() {
 			$(cat).append('<div id="task_' + val.id + '" data-task-id="' + val.id + '" class="task ' + pclass + ' row-fluid"><div class="desc span8"><div class="title"><a target="_blank" href="https://www.wunderlist.com/#/tasks/' + val.id + '">' + val.title + '</a></div><div><p>' + val.note + '</p>' + subhtml + '</div></div><div class="time span4"><div class="date">' + due + '</div><div>created ' + val.created_ago + '</div></div>');
 		});
 
-		$("#tasksHighPriority, #tasksNormalPriority, #tasksCompleted").slideDown();
+		$("#tasksHighPriority, #tasksNormalPriority, #tasksCompleted").each(function() {
+			var ratio = 1 / $(this).ignorantHeight();
+			$(this).slideDown(1000/ratio);
+		});
 	});
 });
