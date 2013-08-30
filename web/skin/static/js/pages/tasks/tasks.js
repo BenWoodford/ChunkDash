@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	$.getJSON('/api/tasks/list', function(json, textStatus) {
 		if(json.response == "error") {
-			$("#returnmsg").html("<h4>Failed to obtain task list. Error was: </h4><div>" + json.message + "</div>");
+			$("#returnmsg").html("<b>Failed to obtain task list. Error was:</b> " + json.message);
 			return;
 		}
 
