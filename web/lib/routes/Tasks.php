@@ -2,7 +2,7 @@
 
 class Tasks extends Router {
 	public static function stub() {
-		parent::start();
+		parent::start("tasks");
 
 		getTemplate()->display('tasks.php');
 

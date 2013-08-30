@@ -1,7 +1,7 @@
 <?php
 class Router {
-	public static function start() {
-		getTemplate()->display('header.php', array('name' => (isset($_SERVER['REMOTE_USER']) ? $_SERVER['REMOTE_USER'] : "anonymous@loadingchunks.net")));
+	public static function start($active_tab = "") {
+		getTemplate()->display('header.php', array('name' => (isset($_SERVER['REMOTE_USER']) ? $_SERVER['REMOTE_USER'] : "anonymous@loadingchunks.net"), 'active' => $active_tab));
 	}
 
 	public static function end($footer_include = array()) {

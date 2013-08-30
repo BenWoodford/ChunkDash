@@ -97,15 +97,16 @@
 			<div id="sidebar-left" class="span1">
 				<div class="nav-collapse sidebar-nav">
 					<ul id="sidemenu" class="nav nav-tabs nav-stacked main-menu">
-						<li class="active"><a href="/" data-page="overview" class="menu-item"><i class="fa-icon-dashboard"></i><span class="hidden-tablet"> Overview</span></a></li>	
-						<li><a href="/hardware" data-page="hardware" class="menu-item"><i class="fa-icon-upload-alt"></i><span class="hidden-tablet"> Hardware</span></a></li>
-						<li><a href="/bans" data-page="bans" class="menu-item"><i class="fa-icon-legal"></i><span class="hidden-tablet"> Ban Manager</span></a></li>
-						<li><a href="/tasks" data-page="tasks" class="menu-item"><i class="fa-icon-tasks"></i><span class="hidden-tablet"> Wunderlist</span></a></li>
-						<li><a href="/users" data-page="users" class="menu-item"><i class="fa-icon-user"></i><span class="hidden-tablet"> Users</span></a></li>
-						<li><a href="/regions" data-page="regions" class="menu-item"><i class="fa-icon-globe"></i><span class="hidden-tablet"> Regions</span></a></li>
-						<li><a href="/shopping" data-page="shopping" class="menu-item"><i class="fa-icon-shopping-cart"></i><span class="hidden-tablet"> Shopping</span></a></li>
-						<li><a href="/notifications" data-page="notifications" class="menu-item"><i class="fa-icon-warning-sign"></i><span class="hidden-tablet"> Notifications</span></a></li>
-						<li><a href="/statistics" data-page="statistics" class="menu-item"><i class="fa-icon-bar-chart"></i><span class="hidden-tablet"> Statistics</span></a></li>
+						<li <?php if($active == "overview") echo 'class="active"'; ?>><a href="/" data-page="overview" class="menu-item"><i class="fa-icon-dashboard"></i><span class="hidden-tablet"> Overview</span></a></li>	
+						<li <?php if($active == "hardware") echo 'class="active"'; ?>><a href="/hardware" data-page="hardware" class="menu-item"><i class="fa-icon-upload-alt"></i><span class="hidden-tablet"> Hardware</span></a></li>
+						<li <?php if($active == "bans") echo 'class="active"'; ?>><a href="/bans" data-page="bans" class="menu-item"><i class="fa-icon-legal"></i><span class="hidden-tablet"> Ban Manager</span></a></li>
+						<li <?php if($active == "tasks") echo 'class="active"'; ?>><a href="/tasks" data-page="tasks" class="menu-item"><i class="fa-icon-tasks"></i><span class="hidden-tablet"> Wunderlist</span></a></li>
+						<li <?php if($active == "users") echo 'class="active"'; ?>><a href="/users" data-page="users" class="menu-item"><i class="fa-icon-user"></i><span class="hidden-tablet"> Users</span></a></li>
+						<li <?php if($active == "regions") echo 'class="active"'; ?>><a href="/regions" data-page="regions" class="menu-item"><i class="fa-icon-globe"></i><span class="hidden-tablet"> Regions</span></a></li>
+
+						<li <?php if($active == "shopping") echo 'class="active"'; ?>><a href="/shopping" data-page="shopping" class="menu-item"><i class="fa-icon-shopping-cart"></i><span class="hidden-tablet"> Shopping</span></a></li>
+						<li <?php if($active == "notifications") echo 'class="active"'; ?>><a href="/notifications" data-page="notifications" class="menu-item"><i class="fa-icon-warning-sign"></i><span class="hidden-tablet"> Notifications</span></a></li>
+						<li <?php if($active == "statistics") echo 'class="active"'; ?>><a href="/statistics" data-page="statistics" class="menu-item"><i class="fa-icon-bar-chart"></i><span class="hidden-tablet"> Statistics</span></a></li>
 					</ul>
 				</div>
 			</div>
