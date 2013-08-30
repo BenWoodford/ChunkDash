@@ -6,7 +6,7 @@ class Tasks extends Router {
 
 		getTemplate()->display('tasks.php');
 
-		parent::end();
+		parent::end('<script src="/skin/static/js/pages/tasks/tasks.js"');
 	}
 }
 
