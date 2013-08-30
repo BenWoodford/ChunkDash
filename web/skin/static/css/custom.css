@@ -11,3 +11,7 @@ a.dropdown-menu-sub-footer {
 	border-top-width: 2px;
 	border-bottom-width: 2px;
 }
+
+.nav-tabs.nav-stacked > li.active > a {
+	border-right: 2px solid transparent;
+}
