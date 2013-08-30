@@ -22,4 +22,6 @@ function loadNotifications(page) {
 	});
 }
 
-loadNotifications(parseInt($("#page_identifier").text()));
+$(document).ready(function() {
+	loadNotifications(parseInt($("#page_identifier").text()));
+});

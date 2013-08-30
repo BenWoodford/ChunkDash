@@ -1,4 +1,5 @@
 <h1>Tasks</h1>
+<div id="returnmsg" class="text-center"></div>
 <div class="row-fluid">
 	<div class="span7">
 		<div class="priority high"><span>high priority</span></div>
