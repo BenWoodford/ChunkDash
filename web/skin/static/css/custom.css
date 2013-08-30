@@ -4,7 +4,6 @@ a.dropdown-menu-sub-footer {
 
 .nav-tabs.nav-stacked > li > a {
 	border: 2px solid transparent;
-	border-right: none;
 }
 
 .nav-tabs.nav-stacked > li > a:hover {
