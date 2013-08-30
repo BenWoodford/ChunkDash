@@ -1,5 +1,7 @@
 (function ( $ ) {
 	$.fn.ignorantHeight = function() {
-		return $(this).clone().css('display', 'block').css('visibility', 'visible').css('position', 'absolute').height();
+		var ret $(this).css('display', 'block').css('visibility', 'visible').css('position', 'absolute').height();
+		$(this).css('display', '').css('visibility', '').css('position', '');
+		return ret;
 	};
 })( jQuery );
