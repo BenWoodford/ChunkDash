@@ -1,3 +1,14 @@
 a.dropdown-menu-sub-footer {
 	cursor: pointer;
 }
+
+.nav-tabs.nav-stacked > li > a {
+	border: 2px solid transparent;
+	border-right: none;
+}
+
+.nav-tabs.nav-stacked > li > a:hover {
+	border-left: 2px solid transparent;
+	border-top: 2px solid transparent;
+	border-bottom: 2px solid transparent;
+}
