@@ -6,7 +6,7 @@ class Notifications extends Router {
 
 		getTemplate()->display('notifications.php', array('page' => $page));
 
-		parent::end();
+		parent::end('<script src="/skin/static/js/pages/notifications/notifications.js"');
 	}
 }
 
