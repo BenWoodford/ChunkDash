@@ -58,11 +58,11 @@
 </form>
 
 <div class="row-fluid">
-	<div class="span11">
+	<div class="span10">
 		<div id="graph" class="center" style="height:500px;"></div>
 	</div>
 
-	<div class="span1">
+	<div class="span2">
 		<h2>Legend</h2>
 		<div id="graphLegend"></div>
 	</div>
