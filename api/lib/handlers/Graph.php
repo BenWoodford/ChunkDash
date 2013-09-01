@@ -46,7 +46,7 @@ class Graph {
 				$metric = $split[2];
 			}
 
-			$wherestring .= " `metric` = ':value_:metric' AND `timestamp` BETWEEN " . $ret['start'] . " AND " . $ret['end'];
+			$wherestring .= " `metric` = '" . $split[1] . "_" . $metric . "' AND `timestamp` BETWEEN " . $ret['start'] . " AND " . $ret['end'];
 			$additionals = "";
 
 			switch($metric) {
