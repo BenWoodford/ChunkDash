@@ -10,6 +10,7 @@ class Graph {
 			'start' => strtotime($_POST['start']),
 			'end' => strtotime($_POST['end']),
 			'data' => array(),
+			'given' => $_POST,
 		);
 
 		foreach($_POST['metrics'] as $met) {
@@ -18,7 +19,7 @@ class Graph {
 			$finish = false;
 
 			foreach($split as $check) {
-				if(ctype_alnum($check))
+				if(!ctype_alnum($check))
 					$finish = true;
 
 			}
