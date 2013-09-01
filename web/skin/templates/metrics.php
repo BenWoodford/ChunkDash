@@ -2,7 +2,7 @@
 <form class="form-horizontal" id="filterForm">
 	<div class="row-fluid">
 		<div class="span7">
-			<select class="span12" id="selectMetrics" multiple data-rel="chosen">
+			<select class="span12" name="metrics" id="selectMetrics" multiple data-rel="chosen">
 				<option selected value="all_users">All - Users</option>
 				<option value="all_entities">All - Entities</option>
 				<option value="all_chunks">All - Chunks</option>
@@ -16,8 +16,8 @@
 			<div class="daterange-prepick" id="graph-range">
 				<i class="icon-calendar icon-large"></i>
 				<span><?=$yesterday;?> - <?=$today;?></span>
-				<input type="hidden" class="start" name="start" />
-				<input type="hidden" class="end" name="end" />
+				<input type="hidden" class="start" name="start" value="<?=$yesterday;?>" />
+				<input type="hidden" class="end" name="end" value="<?=$today;?>" />
 			</div>
 		</div>
 
