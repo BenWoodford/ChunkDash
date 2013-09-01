@@ -18,6 +18,7 @@
 	<link id="base-style" href="/skin/static/css/style.css" rel="stylesheet" />
 	<link id="base-style-responsive" href="/skin/static/css/style-responsive.css" rel="stylesheet" />
 	<link id="custom" href="/skin/static/css/custom.css" rel="stylesheet" />
+	<link id="daterange-css" href="/skin/static/css/daterangepicker.css" rel="stylesheet" />
 	<link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css' />
 	
 	<!-- end: CSS -->

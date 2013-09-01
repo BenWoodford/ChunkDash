@@ -53,6 +53,8 @@
 	<script src="/skin/static/js/jquery.masonry.min.js"></script>
 	<script src="/skin/static/js/jquery.knob.modified.js"></script>
 	<script src="/skin/static/js/jquery.sparkline.min.js"></script>
+	<script src="/skin/static/js/moment.js"></script>
+	<script src="/skin/static/js/daterangepicker.js"></script>
 	<script src="/skin/static/js/jquery.lc.js"></script>
 	<script src="/skin/static/js/counter.js"></script>
 	<script src="/skin/static/js/retina.js"></script>
