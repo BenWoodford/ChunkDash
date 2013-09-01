@@ -12,7 +12,7 @@ class Graph {
 			'series' => array(),
 			'given' => $_POST,
 			'sql' => array(),
-			'axis' => array('min'=>null,'max'=>null),
+			'axis' => array('min' => null,'max' => null,'unit' => $_POST['x_unit']),
 		);
 
 		foreach($_POST['metrics'] as $met) {
@@ -66,9 +66,17 @@ class Graph {
 
 			$ret['sql'][] = $sql = "SELECT `server`,`world`,`timestamp`,`metric`" . $additionals . " FROM `world_usage` " . $wherestring . " " . $groupstring . " ORDER BY `timestamp` ASC";
 
+			$points = array();
+
+			$dbret = getDatabase()->all($sql);
+
+			foreach($dbret as $res) {
+				$points[$res['timestamp']] = $res['point'];
+			}
+
 			$data = array(
 				'label' => $split[1] . " - " . $metric,
-				'data' => getDatabase()->all($sql),
+				'data' => $points,
 			);
 
 			foreach($data['data'] as $d) {

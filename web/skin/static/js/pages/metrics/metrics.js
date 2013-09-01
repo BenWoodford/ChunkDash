@@ -43,7 +43,11 @@ $(document).ready(function() {
 								tickColor: "#dddddd",
 								borderWidth: 0
 							},
-						   yaxis: { min: data.axis.min, max: data.axis.max },
+							yaxis: { min: data.axis.min, max: data.axis.max },
+							xaxis: {
+						   		mode: "time",
+						   		minTickSize: [1, data.axis.unit],
+							}
 						   /*colors: ["#FA5833", "#2FABE9"]*/
 					}
 				);
