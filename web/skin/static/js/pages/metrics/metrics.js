@@ -43,10 +43,12 @@ $(document).ready(function() {
 								tickColor: "#dddddd",
 								borderWidth: 0
 							},
-							yaxis: { min: data.axis.min, max: data.axis.max },
+							yaxis: { min: data.axis.y.min, max: data.axis.y.max },
 							xaxis: {
 						   		mode: "time",
-						   		minTickSize: [1, data.axis.unit],
+						   		minTickSize: [1, data.axis.x.unit],
+						   		min: new Date(data.axis.x.min * 1000),
+						   		max: new Date(data.axis.x.max * 1000),
 							}
 						   /*colors: ["#FA5833", "#2FABE9"]*/
 					}

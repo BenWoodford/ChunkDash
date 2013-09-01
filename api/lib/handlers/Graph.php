@@ -82,22 +82,22 @@ class Graph {
 				'data' => $points,
 			);
 
-			foreach($data['data'] as $d) {
-				if($d['point'] > $ret['axis']['y']['max'] || $ret['axis']['y']['max'] == null) {
-					$ret['axis']['y']['max'] = $d['point'];
+			foreach($data['data'] as $timestamp=>$point) {
+				if($point > $ret['axis']['y']['max'] || $ret['axis']['y']['max'] == null) {
+					$ret['axis']['y']['max'] = $point;
 				}
 
-				if($d['point'] < $ret['axis']['y']['min'] || $ret['axis']['y']['min'] == null) {
-					$ret['axis']['y']['min'] = $d['point'];
+				if($point < $ret['axis']['y']['min'] || $ret['axis']['y']['min'] == null) {
+					$ret['axis']['y']['min'] = $point;
 				}
 
 
-				if($d['timestamp'] > $ret['axis']['x']['max'] || $ret['axis']['x']['max'] == null) {
-					$ret['axis']['x']['max'] = $d['timestamp'];
+				if($timestamp > $ret['axis']['x']['max'] || $ret['axis']['x']['max'] == null) {
+					$ret['axis']['x']['max'] = $timestamp;
 				}
 
-				if($d['timestamp'] < $ret['axis']['x']['min'] || $ret['axis']['x']['min'] == null) {
-					$ret['axis']['x']['min'] = $d['timestamp'];
+				if($timestamp < $ret['axis']['x']['min'] || $ret['axis']['x']['min'] == null) {
+					$ret['axis']['x']['min'] = $timestamp;
 				}
 			}
 
