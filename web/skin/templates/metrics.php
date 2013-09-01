@@ -63,6 +63,7 @@
 	</div>
 
 	<div class="span1">
-		Legend?
+		<h2>Legend</h2>
+		<div id="graphLegend"></div>
 	</div>
 </div>

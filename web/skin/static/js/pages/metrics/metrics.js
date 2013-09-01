@@ -44,7 +44,7 @@ $(document).ready(function() {
 							tickColor: "#dddddd",
 							borderWidth: 0
 						},
-						legend: { position: 'ne' },
+						legend: { show: true, container: $("#graphLegend") },
 						yaxis: { min: data.axis.y.min, max: data.axis.y.max },
 						xaxis: {
 					   		mode: "time",
