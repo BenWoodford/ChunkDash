@@ -11,11 +11,23 @@
 <form class="form-horizontal">
 	<div class="row-fluid">
 		<div class="span3">
-			<div class="control-group">
-				<label class="control-label">Date Range</label>
-				<div class="controls">
-					<input type="text" class="input-small datepicker" id="dateTo" value="<?=$yesterday;?>"> - <input type="text" class="input-small datepicker" id="dateFrom" value="<?=$today;?>">
-				</div>
+
+		</div>
+
+		<div class="span3">
+
+		</div>
+
+		<div class="span3">
+
+		</div>
+
+		<div class="span3">
+			<div class="datepicker-prepick" id="graph-range">
+				<i class="icon-calendar icon-large"></i>
+				<span><?=$yesterday;?> - <?=$today;?></span>
+				<input type="hidden" class="start" name="start" />
+				<input type="hidden" class="end" name="end" />
 			</div>
 		</div>
 	</div>
