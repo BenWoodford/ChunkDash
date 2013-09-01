@@ -48,8 +48,8 @@ $(document).ready(function() {
 							xaxis: {
 						   		mode: "time",
 						   		minTickSize: [1, data.axis.x.unit],
-						   		min: (new Date(data.axis.x.min * 1000)).getTime(),
-						   		max: (new Date(data.axis.x.max * 1000)).getTime(),
+						   		min: (new Date(data.axis.x.min)).getTime(),
+						   		max: (new Date(data.axis.x.max)).getTime(),
 							},
 							colors: data.colours,
 					}
