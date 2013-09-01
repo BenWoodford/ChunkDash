@@ -42,13 +42,17 @@ function ago($time, $plural = false, $suffix = "")
 function formatDateGrouping($x_unit, $col = "timestamp") {
 	switch($x_unit) {
 		case 'month':
-			return "MONTH(`" . $col . "`)";
+			return "GROUP BY MONTH(`" . $col . "`)";
+			break;
 		case 'week':
-			return "WEEK(`" . $col . "`)";
+			return "GROUP BY WEEK(`" . $col . "`)";
+			break;
 		case 'day':
-			return "DAY(`" . $col . "`)";
+			return "GROUP BY DAY(`" . $col . "`)";
+			break;
 		case 'hour':
-			return "HOUR(`" . $col . "`)";
+			return "GROUP BY HOUR(`" . $col . "`)";
+			break;
 	}
 }
 ?>

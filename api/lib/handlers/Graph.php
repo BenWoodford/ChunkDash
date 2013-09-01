@@ -27,14 +27,14 @@ class Graph {
 			if($finish)
 				continue;
 
-			$groupstring = "GROUP BY ";
+			$groupstring = "";
 			$wherestring = "WHERE ";
 
 			if($split['0'] != "all") {
 				$wherestring .= "`server` = '" . $split[0] . "' AND ";
 			}
 
-			$groupstring .= formatDateGrouping($_POST['x_unit']) . ",";
+			$groupstring .= formatDateGrouping($_POST['x_unit']);
 
 			$metric = "";
 
