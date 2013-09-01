@@ -12,10 +12,12 @@ $(document).ready(function() {
 		         'Last Month': [moment().subtract('month', 1).startOf('month'), moment().subtract('month', 1).endOf('month')]
 		      },
 		      startDate: moment().subtract('days', 29),
-		      endDate: moment()
+		      endDate: moment(),
+		      timePicker: true,
+		      timePickerIncrement: 30,
 		    },
 		    function(start, end) {
-		        $(picker).find('span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+		        $(picker).find('span').html(start.format('MMMM D, YYYY h:mm A') + ' - ' + end.format('MMMM D, YYYY h:mm A'));
 		        $(picker).find('input.start').val(start);
 		        $(picker).find('input.end').val(end);
 		    }
