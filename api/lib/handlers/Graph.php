@@ -50,11 +50,11 @@ class Graph {
 
 			switch($metric) {
 				case 'avg':
-					$additionals .= "AVG(`value`)";
+					$additionals .= ",AVG(`value`)";
 					break;
 
 				case 'peak':
-					$additionals .= "MAX(`value`)";
+					$additionals .= ",MAX(`value`)";
 					break;
 			}
 
