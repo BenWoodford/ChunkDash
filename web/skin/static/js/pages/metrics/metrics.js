@@ -5,7 +5,7 @@ $(document).ready(function() {
 		    {
 		      timePicker: true,
 		      timePickerIncrement: 30,
-		      ranges: {
+/*		      ranges: {
 		      	 'Last Hour': [moment().subtract('hours', 1), moment()],
 		         'Today': [moment(), moment()],
 		         'Yesterday': [moment().subtract('days', 1), moment().subtract('days', 1)],
@@ -13,7 +13,7 @@ $(document).ready(function() {
 		         'Last 30 Days': [moment().subtract('days', 29), moment()],
 		         'This Month': [moment().startOf('month'), moment().endOf('month')],
 		         'Last Month': [moment().subtract('month', 1).startOf('month'), moment().subtract('month', 1).endOf('month')]
-		      },
+		      },*/
 		      startDate: moment().subtract('days', 29),
 		      endDate: moment(),
 		    },
