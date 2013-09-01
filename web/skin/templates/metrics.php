@@ -39,7 +39,7 @@
 			<select class="span12" name="x_unit" id="xUnit">
 				<option value="day">Days</option>
 				<option value="hour">Hours</option>
-				<option value="hour">Hours</option>
+				<option value="week">Weeks</option>
 				<option value="month">Months</option>
 			</select>
 		</div>
@@ -59,7 +59,7 @@
 
 <div class="row-fluid">
 	<div class="span11">
-		Chart.
+		<div id="graph" class="center" style="height:500px;"></div>
 	</div>
 
 	<div class="span1">
