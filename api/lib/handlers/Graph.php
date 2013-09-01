@@ -39,7 +39,7 @@ class Graph {
 			$metric = "";
 
 			if(count($split) == 4) {
-				$wherestring .="`world` = '" . $split[2] . "' AND ";
+				$wherestring .="`world` = '" . str_replace("-", "_", $split[2]) . "' AND ";
 				$metric = $split[3];
 			} else {
 				$metric = $split[2];
@@ -58,7 +58,7 @@ class Graph {
 					break;
 			}
 
-			$ret['data'][] = "SELECT *" . $additionals . " FROM `world_usage` " . $groupstring . " " . $wherestring . " ORDER BY `timestamp` ASC";
+			$ret['data'][] = getDatabase()->all("SELECT *" . $additionals . " FROM `world_usage` " . $wherestring . " " . $groupstring . " ORDER BY `timestamp` ASC");
 		}
 		return $ret;
 	}
