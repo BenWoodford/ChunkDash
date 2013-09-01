@@ -1,25 +1,19 @@
-<div class="row-fluid">
-	<div class="span11">
-		Chart.
-	</div>
-
-	<div class="span1">
-		Legend?
-	</div>
-</div>
-
 <form class="form-horizontal">
 	<div class="row-fluid">
-		<div class="span3">
-
-		</div>
-
-		<div class="span3">
-
-		</div>
-
-		<div class="span3">
-
+		<div class="span8">
+			<div class="control-group">
+				<label class="control-label" for="selectMetrics">Metrics: </label>
+				<div class="controls">
+					<select id="selectMetrics" multiple data-rel="chosen">
+						<option selected value="all_users">All - Users</option>
+						<option value="all_entities">All - Users</option>
+						<option value="all_chunks">All - Chunks</option>
+						<option selected value="aragorn_users">Aragorn - Users</option>
+						<option value="aragorn_entites">Aragorn - Entites</option>
+						<option value="aragorn_chunks">Aragorn - Chunks</option>
+					</select>
+				</div>
+			</div>
 		</div>
 
 		<div class="span3">
@@ -30,5 +24,17 @@
 				<input type="hidden" class="end" name="end" />
 			</div>
 		</div>
+
+		<div class="span1">Filter.</div>
 	</div>
 </form>
+
+<div class="row-fluid">
+	<div class="span11">
+		Chart.
+	</div>
+
+	<div class="span1">
+		Legend?
+	</div>
+</div>
