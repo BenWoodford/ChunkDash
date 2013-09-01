@@ -65,7 +65,7 @@ class Graph {
 
 			$ret['sql'][] = $sql = "SELECT `server`,`world`,`timestamp`,`metric`" . $additionals . " FROM `world_usage` " . $wherestring . " " . $groupstring . " ORDER BY `timestamp` ASC";
 
-			$ret['data'][] = getDatabase()->all($sql, array(':value' => $split[1], ':metric' => $metric));
+			$ret['data'][] = getDatabase()->all($sql);
 		}
 		return $ret;
 	}
