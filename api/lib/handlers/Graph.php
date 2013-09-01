@@ -6,6 +6,8 @@ class Graph {
 	}
 
 	static function postMetrics() {
+		$colours = array("#FA5833", "#2FABE9");
+
 		$ret = array(
 			'start' => strtotime($_POST['start']),
 			'end' => strtotime($_POST['end']),
@@ -16,6 +18,7 @@ class Graph {
 				'x' => array('min' => null, 'max' => null, 'unit' => $_POST['x_unit']),
 				'y' => array('min' => 0,'max' => null),
 			),
+			'colours' => array(),
 		);
 
 		foreach($_POST['metrics'] as $met) {
@@ -103,6 +106,9 @@ class Graph {
 
 			$ret['series'][] = $data;
 		}
+
+		$ret['colours'] = array_slice($colours, 0, count($ret['series']));
+
 		return $ret;
 	}
 }
