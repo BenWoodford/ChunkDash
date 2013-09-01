@@ -54,8 +54,12 @@ class Graph {
 					$additionals .= ",AVG(`value`) as point";
 					break;
 
-				case 'peak':
+				case 'max':
 					$additionals .= ",MAX(`value`) as point";
+					break;
+
+				case 'min':
+					$additionals .= ",MIN(`value`) as point";
 					break;
 			}
 
