@@ -2,9 +2,9 @@
 
 class Metrics extends Router {
 	public static function stub() {
-		parent::start("overview");
+		parent::start("metrics");
 
-		getTemplate()->display('overview.php', array('page' => $page));
+		getTemplate()->display('metrics.php');
 
 		parent::end();
 	}

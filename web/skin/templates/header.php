@@ -103,10 +103,10 @@
 						<li <?php if($active == "tasks") echo 'class="active"'; ?>><a href="/tasks" data-page="tasks" class="menu-item"><i class="fa-icon-tasks"></i><span class="hidden-tablet"> Wunderlist</span></a></li>
 						<li <?php if($active == "users") echo 'class="active"'; ?>><a href="/users" data-page="users" class="menu-item"><i class="fa-icon-user"></i><span class="hidden-tablet"> Users</span></a></li>
 						<li <?php if($active == "regions") echo 'class="active"'; ?>><a href="/regions" data-page="regions" class="menu-item"><i class="fa-icon-globe"></i><span class="hidden-tablet"> Regions</span></a></li>
-
 						<li <?php if($active == "shopping") echo 'class="active"'; ?>><a href="/shopping" data-page="shopping" class="menu-item"><i class="fa-icon-shopping-cart"></i><span class="hidden-tablet"> Shopping</span></a></li>
 						<li <?php if($active == "notifications") echo 'class="active"'; ?>><a href="/notifications" data-page="notifications" class="menu-item"><i class="fa-icon-warning-sign"></i><span class="hidden-tablet"> Notifications</span></a></li>
 						<li <?php if($active == "statistics") echo 'class="active"'; ?>><a href="/statistics" data-page="statistics" class="menu-item"><i class="fa-icon-bar-chart"></i><span class="hidden-tablet"> Statistics</span></a></li>
+						<li <?php if($active == "metrics") echo 'class="active"'; ?>><a href="/metrics" data-page="metrics" class="menu-item"><i class="fa-icon-bar-chart"></i><span class="hidden-tablet"> Metrics</span></a></li>
 					</ul>
 				</div>
 			</div>
