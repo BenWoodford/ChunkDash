@@ -2,7 +2,7 @@
 <form class="form-horizontal" id="filterForm">
 	<div class="row-fluid">
 		<div class="span7">
-			<select class="span12" name="metrics" id="selectMetrics" multiple data-rel="chosen">
+			<select class="span12" name="metrics[]" id="selectMetrics" multiple data-rel="chosen">
 				<option selected value="all_users">All - Users</option>
 				<option value="all_entities">All - Entities</option>
 				<option value="all_chunks">All - Chunks</option>
