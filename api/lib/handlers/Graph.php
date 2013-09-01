@@ -14,7 +14,7 @@ class Graph {
 			'sql' => array(),
 			'axis' => array(
 				'x' => array('min' => null, 'max' => null, 'unit' => $_POST['x_unit']),
-				'y' => array('min' => null,'max' => null),
+				'y' => array('min' => 0,'max' => null),
 			),
 		);
 
@@ -83,9 +83,9 @@ class Graph {
 			);
 
 			foreach($data['data'] as $timestamp=>$point) {
-				if($point > $ret['axis']['y']['max'] || $ret['axis']['y']['max'] == null) {
+				/*if($point > $ret['axis']['y']['max'] || $ret['axis']['y']['max'] == null) {
 					$ret['axis']['y']['max'] = $point;
-				}
+				}*/
 
 				if($point < $ret['axis']['y']['min'] || $ret['axis']['y']['min'] == null) {
 					$ret['axis']['y']['min'] = $point;
