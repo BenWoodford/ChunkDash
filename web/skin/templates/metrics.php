@@ -4,7 +4,7 @@
 			<div class="control-group">
 				<label class="control-label" for="selectMetrics">Metrics: </label>
 				<div class="controls">
-					<select id="selectMetrics" multiple data-rel="chosen">
+					<select class="span12" id="selectMetrics" multiple data-rel="chosen">
 						<option selected value="all_users">All - Users</option>
 						<option value="all_entities">All - Users</option>
 						<option value="all_chunks">All - Chunks</option>
