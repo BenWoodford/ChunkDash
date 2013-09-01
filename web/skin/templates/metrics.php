@@ -12,7 +12,7 @@
 			</select>
 		</div>
 
-		<div class="span3">
+		<div class="span2">
 			<div class="daterange-prepick" id="graph-range">
 				<i class="icon-calendar icon-large"></i>
 				<span><?=$yesterday;?> - <?=$today;?></span>
@@ -21,7 +21,7 @@
 			</div>
 		</div>
 
-		<div class="span1"><button id="graph-it" class="btn btn-large btn-info">Graph It!</button></div>
+		<div class="span2"><button id="graph-it" class="btn btn-large btn-info">Graph It!</button></div>
 	</div>
 </form>
 
