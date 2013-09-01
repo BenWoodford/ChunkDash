@@ -21,7 +21,7 @@
 			</div>
 		</div>
 
-		<div class="span1"><button id="graph-it" type="submit" class="btn btn-primary">Graph It!</button></div>
+		<div class="span1"><button id="graph-it" class="btn btn-small btn-info">Graph It!</button></div>
 	</div>
 </form>
 
