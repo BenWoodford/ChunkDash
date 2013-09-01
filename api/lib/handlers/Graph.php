@@ -85,14 +85,17 @@ class Graph {
 				'data' => $points,
 			);
 
-			foreach($data['data'] as $timestamp=>$point) {
-				/*if($point > $ret['axis']['y']['max'] || $ret['axis']['y']['max'] == null) {
-					$ret['axis']['y']['max'] = $point;
-				}*/
+			foreach($data['data'] as $parr) {
+				$point = $parr[1];
+				$timestamp = $parr[0];
 
-				if($point < $ret['axis']['y']['min'] || $ret['axis']['y']['min'] == null) {
-					$ret['axis']['y']['min'] = $point;
+				if($point > $ret['axis']['y']['max'] || $ret['axis']['y']['max'] == null) {
+					$ret['axis']['y']['max'] = $point;
 				}
+
+				/*if($point < $ret['axis']['y']['min'] || $ret['axis']['y']['min'] == null) {
+					$ret['axis']['y']['min'] = $point;
+				}*/
 
 
 				if($timestamp > $ret['axis']['x']['max'] || $ret['axis']['x']['max'] == null) {
