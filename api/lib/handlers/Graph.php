@@ -107,7 +107,8 @@ class Graph {
 				}
 			}
 
-			$ret['series'][] = $data;
+			if(count($data['data']) > 0)
+				$ret['series'][] = $data;
 		}
 
 		$ret['colours'] = array_slice($colours, 0, count($ret['series']));
