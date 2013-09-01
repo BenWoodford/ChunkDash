@@ -1,7 +1,7 @@
 <h1>Metrics</h1>
 <form class="form-horizontal">
 	<div class="row-fluid">
-		<div class="span8">
+		<div class="span7">
 			<select class="span12" id="selectMetrics" multiple data-rel="chosen">
 				<option selected value="all_users">All - Users</option>
 				<option value="all_entities">All - Users</option>
@@ -12,7 +12,7 @@
 			</select>
 		</div>
 
-		<div class="span2">
+		<div class="span3">
 			<div class="daterange-prepick" id="graph-range">
 				<i class="icon-calendar icon-large"></i>
 				<span><?=$yesterday;?> - <?=$today;?></span>
