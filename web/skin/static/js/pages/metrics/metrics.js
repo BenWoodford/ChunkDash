@@ -1,4 +1,6 @@
 $(document).ready(function() {
+	var colours = ["#FA5833", "#2FABE9", "#FABB3D", "#78CD51"];
+
 	$('.daterange-prepick').each(function() {
 		var picker = $(this);
 		$(picker).daterangepicker(
@@ -30,7 +32,7 @@ $(document).ready(function() {
 		$.post('/api/graphs', $("#filterForm").serialize(), function(data, textStatus, xhr) {
 			if(data.series.length > 0) {
 				var plot = $.plot($("#graph"),
-						[ data.series ], {
+						data.series, {
 							series: {
 								lines: { show: true,
 									lineWidth: 2,
@@ -51,7 +53,7 @@ $(document).ready(function() {
 						   		min: (new Date(data.axis.x.min)).getTime(),
 						   		max: (new Date(data.axis.x.max)).getTime(),
 							},
-							colors: data.colours,
+							colors: colours.slice(0,data.series.length),
 					}
 				);
 			}

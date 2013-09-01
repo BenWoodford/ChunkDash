@@ -6,8 +6,6 @@ class Graph {
 	}
 
 	static function postMetrics() {
-		$colours = array("#FA5833", "#2FABE9");
-
 		$ret = array(
 			'start' => strtotime($_POST['start']),
 			'end' => strtotime($_POST['end']),
@@ -112,8 +110,6 @@ class Graph {
 			if(count($data['data']) > 0)
 				$ret['series'][] = $data;
 		}
-
-		$ret['colours'] = array_slice($colours, 0, count($ret['series']));
 
 		return $ret;
 	}
