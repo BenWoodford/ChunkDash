@@ -1,19 +1,15 @@
+<h1>Metrics</h1>
 <form class="form-horizontal">
 	<div class="row-fluid">
 		<div class="span8">
-			<div class="control-group">
-				<label class="control-label" for="selectMetrics">Metrics: </label>
-				<div class="controls">
-					<select class="span12" id="selectMetrics" multiple data-rel="chosen">
-						<option selected value="all_users">All - Users</option>
-						<option value="all_entities">All - Users</option>
-						<option value="all_chunks">All - Chunks</option>
-						<option selected value="aragorn_users">Aragorn - Users</option>
-						<option value="aragorn_entites">Aragorn - Entites</option>
-						<option value="aragorn_chunks">Aragorn - Chunks</option>
-					</select>
-				</div>
-			</div>
+			<select class="span12" id="selectMetrics" multiple data-rel="chosen">
+				<option selected value="all_users">All - Users</option>
+				<option value="all_entities">All - Users</option>
+				<option value="all_chunks">All - Chunks</option>
+				<option selected value="aragorn_users">Aragorn - Users</option>
+				<option value="aragorn_entites">Aragorn - Entites</option>
+				<option value="aragorn_chunks">Aragorn - Chunks</option>
+			</select>
 		</div>
 
 		<div class="span3">
@@ -25,7 +21,7 @@
 			</div>
 		</div>
 
-		<div class="span1">Filter.</div>
+		<div class="span1"><button type="submit" class="btn btn-primary">Graph It!</button></div>
 	</div>
 </form>
 
