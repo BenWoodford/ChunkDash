@@ -3,25 +3,34 @@
 	<div class="row-fluid">
 		<div class="span6">
 			<select class="span12" name="metrics[]" id="selectMetrics" multiple data-rel="chosen">
-				<option selected value="all_players_peak">All - Peak Players</option>
+				<option selected value="all_players_max">All - Peak Players</option>
+				<option selected value="all_players_min">All - Min Players</option>
 				<option value="all_players_avg">All - Avg Players</option>
-				<option value="all_entities_peak">All - Peak Entities</option>
+				<option value="all_entities_max">All - Peak Entities</option>
+				<option value="all_entities_min">All - Min Entities</option>
 				<option value="all_entities_avg">All - Avg Entities</option>
-				<option value="all_chunks_peak">All - Peak Chunks</option>
+				<option value="all_chunks_max">All - Peak Chunks</option>
+				<option value="all_chunks_min">All - Min Chunks</option>
 				<option value="all_chunks_avg">All - Avg Chunks</option>
 
-				<option value="aragorn_players_peak">Aragorn (All) - Peak Players</option>
+				<option value="aragorn_players_max">Aragorn (All) - Peak Players</option>
+				<option value="aragorn_players_min">Aragorn (All) - Min Players</option>
 				<option value="aragorn_players_avg">Aragorn (All) - Avg Players</option>
-				<option value="aragorn_entites_peak">Aragorn (All) - Peak Entites</option>
+				<option value="aragorn_entites_max">Aragorn (All) - Peak Entites</option>
+				<option value="aragorn_entites_min">Aragorn (All) - Min Entites</option>
 				<option value="aragorn_entites_avg">Aragorn (All) - Avg Entites</option>
-				<option value="aragorn_chunks_peak">Aragorn (All) - Peak Chunks</option>
+				<option value="aragorn_chunks_max">Aragorn (All) - Peak Chunks</option>
+				<option value="aragorn_chunks_min">Aragorn (All) - Min Chunks</option>
 				<option value="aragorn_chunks_avg">Aragorn (All) - Avg Chunks</option>
 
-				<option value="aragorn_players_themuseum_peak">Aragorn (Museum) - Peak Players</option>
+				<option value="aragorn_players_themuseum_max">Aragorn (Museum) - Peak Players</option>
+				<option value="aragorn_players_themuseum_min">Aragorn (Museum) - Min Players</option>
 				<option value="aragorn_players_themuseum_avg">Aragorn (Museum) - Avg Players</option>
-				<option value="aragorn_entites_themuseum_peak">Aragorn (Museum) - Peak Entites</option>
+				<option value="aragorn_entites_themuseum_max">Aragorn (Museum) - Peak Entites</option>
+				<option value="aragorn_entites_themuseum_min">Aragorn (Museum) - Min Entites</option>
 				<option value="aragorn_entites_themuseum_avg">Aragorn (Museum) - Avg Entites</option>
-				<option value="aragorn_chunks_themuseum_peak">Aragorn (Museum) - Peak Chunks</option>
+				<option value="aragorn_chunks_themuseum_max">Aragorn (Museum) - Peak Chunks</option>
+				<option value="aragorn_chunks_themuseum_min">Aragorn (Museum) - Min Chunks</option>
 				<option value="aragorn_chunks_themuseum_avg">Aragorn (Museum) - Avg Chunks</option>
 			</select>
 		</div>

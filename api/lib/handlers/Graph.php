@@ -58,7 +58,7 @@ class Graph {
 					break;
 			}
 
-			$ret['data'][] = getDatabase()->all("SELECT *" . $additionals . " FROM `world_usage` " . $wherestring . " " . $groupstring . " ORDER BY `timestamp` ASC");
+			$ret['data'][] = getDatabase()->all("SELECT *" . $additionals . " FROM `world_usage` " . $wherestring . " " . $groupstring . " ORDER BY `timestamp` ASC", array(':value' => $split[1], ':metric' => $metric));
 		}
 		return $ret;
 	}
