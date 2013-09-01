@@ -46,9 +46,9 @@ function formatDateGrouping($x_unit, $col = "timestamp") {
 		case 'week':
 			return "WEEK(`" . $col . "`)";
 		case 'day':
-			return "DAY(`" . $col . "`");
+			return "DAY(`" . $col . "`)";
 		case 'hour':
-			return "HOUR(`" . $col . "`");
+			return "HOUR(`" . $col . "`)";
 	}
 }
 ?>
