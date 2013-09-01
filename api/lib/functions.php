@@ -55,4 +55,8 @@ function formatDateGrouping($x_unit, $col = "timestamp") {
 			break;
 	}
 }
+
+function orderOfMagnitude($n) {
+	return pow(10,floor(log10($n));
+}
 ?>
