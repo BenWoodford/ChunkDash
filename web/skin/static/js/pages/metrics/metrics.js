@@ -3,9 +3,10 @@ $(document).ready(function() {
 		var picker = $(this);
 		$(picker).daterangepicker(
 		    {
-		      timePicker: true, timePickerIncrement: 30,
+		      timePicker: true,
+		      timePickerIncrement: 30,
 		      ranges: {
-		      	 'Last Hour': [moment().subtract('hours', 1), moment()]
+		      	 'Last Hour': [moment().subtract('hours', 1), moment()],
 		         'Today': [moment(), moment()],
 		         'Yesterday': [moment().subtract('days', 1), moment().subtract('days', 1)],
 		         'Last 7 Days': [moment().subtract('days', 6), moment()],
