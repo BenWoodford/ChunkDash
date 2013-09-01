@@ -4,7 +4,7 @@
 		<div class="span7">
 			<select class="span12" id="selectMetrics" multiple data-rel="chosen">
 				<option selected value="all_users">All - Users</option>
-				<option value="all_entities">All - Users</option>
+				<option value="all_entities">All - Entities</option>
 				<option value="all_chunks">All - Chunks</option>
 				<option selected value="aragorn_users">Aragorn - Users</option>
 				<option value="aragorn_entites">Aragorn - Entites</option>

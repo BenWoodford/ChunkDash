@@ -32,6 +32,9 @@ getApi()->get('/notifications/single/(\d+)/?', array('Notification', 'getNotific
 getRoute()->get('/tasks/?', array('Task', 'stub'));
 getApi()->get('/tasks/list/?', array('Task', 'getTasks'), EpiApi::external);
 
+getApi()->post('/graphs/?', array('Graph', 'stub'), EpiApi::external);
+getApi()->get('/graphs/?', array('Graph', 'stub'), EpiApi::external);
+
 function home() {
 	echo "Welcome to the API root.";
 }
