@@ -12,7 +12,10 @@ class Graph {
 			'series' => array(),
 			'given' => $_POST,
 			'sql' => array(),
-			'axis' => array('min' => null,'max' => null,'unit' => $_POST['x_unit']),
+			'axis' => array(
+				'x' => array('min' => null, 'max' => null, 'unit' => $_POST['x_unit']),
+				'y' => array('min' => null,'max' => null),
+			),
 		);
 
 		foreach($_POST['metrics'] as $met) {
@@ -80,12 +83,21 @@ class Graph {
 			);
 
 			foreach($data['data'] as $d) {
-				if($d['point'] > $ret['axis']['max'] || $ret['axis']['max'] == null) {
-					$ret['axis']['max'] = $d['point'];
+				if($d['point'] > $ret['axis']['y']['max'] || $ret['axis']['y']['max'] == null) {
+					$ret['axis']['y']['max'] = $d['point'];
 				}
 
-				if($d['point'] < $ret['axis']['min'] || $ret['axis']['min'] == null) {
-					$ret['axis']['min'] = $d['point'];
+				if($d['point'] < $ret['axis']['y']['min'] || $ret['axis']['y']['min'] == null) {
+					$ret['axis']['y']['min'] = $d['point'];
+				}
+
+
+				if($d['timestamp'] > $ret['axis']['x']['max'] || $ret['axis']['x']['max'] == null) {
+					$ret['axis']['x']['max'] = $d['timestamp'];
+				}
+
+				if($d['timestamp'] < $ret['axis']['x']['min'] || $ret['axis']['x']['min'] == null) {
+					$ret['axis']['x']['min'] = $d['timestamp'];
 				}
 			}
 
