@@ -1,7 +1,7 @@
 <?php
 
 class Graph {
-	static function stub($post = array()) {
-		return var_export($post, true);
+	static function stub() {
+		return var_export(func_get_args(), true);
 	}
 }
