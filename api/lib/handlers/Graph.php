@@ -68,7 +68,7 @@ class Graph {
 
 			$data = array(
 				'label' => $split[1] . " - " . $metric,
-				'data' => getDatabase()->all($sql);
+				'data' => getDatabase()->all($sql),
 			);
 
 			foreach($data['data'] as $d) {
