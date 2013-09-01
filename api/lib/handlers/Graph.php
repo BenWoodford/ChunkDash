@@ -50,15 +50,15 @@ class Graph {
 
 			switch($metric) {
 				case 'avg':
-					$additionals .= ",AVG(`value`)";
+					$additionals .= ",AVG(`value`) as point";
 					break;
 
 				case 'peak':
-					$additionals .= ",MAX(`value`)";
+					$additionals .= ",MAX(`value`) as point";
 					break;
 			}
 
-			$ret['data'][] = getDatabase()->all("SELECT *" . $additionals . " FROM `world_usage` " . $wherestring . " " . $groupstring . " ORDER BY `timestamp` ASC", array(':value' => $split[1], ':metric' => $metric));
+			$ret['data'][] = getDatabase()->all("SELECT `server`,`world`,`timestamp`,`metric`," . $additionals . " FROM `world_usage` " . $wherestring . " " . $groupstring . " ORDER BY `timestamp` ASC", array(':value' => $split[1], ':metric' => $metric));
 		}
 		return $ret;
 	}
