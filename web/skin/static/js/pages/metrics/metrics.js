@@ -7,11 +7,11 @@ $(document).ready(function() {
 		      timePickerIncrement: 30,
 		      ranges: {
 		      	 'Last Hour': [moment().subtract('hours', 1), moment()],
-		         'Today': [moment(), moment()],
-		         'Yesterday': [moment().subtract('days', 1), moment().subtract('days', 1)],
-		         'Last 7 Days': [moment().subtract('days', 6), moment()],
-		         'Last 30 Days': [moment().subtract('days', 29), moment()],
-		         'This Month': [moment().startOf('month'), moment().endOf('month')],
+		         'Today': [moment().startOf('day'), moment()],
+		         'Yesterday': [moment().subtract('days', 1).startOf('day'), moment().subtract('days', 1).endOf('day')],
+		         'Last 7 Days': [moment().subtract('days', 6).startOf('day'), moment().endOf('day')],
+		         'Last 30 Days': [moment().subtract('days', 29).startOf('day'), moment().endOf('day')],
+		         'This Month': [moment().startOf('month').startOf('day'), moment().endOf('month').endOf('day')],
 		         'Last Month': [moment().subtract('month', 1).startOf('month'), moment().subtract('month', 1).endOf('month')]
 		      },
 		      startDate: moment().subtract('days', 29),
