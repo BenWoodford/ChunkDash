@@ -11,6 +11,7 @@ class Graph {
 			'end' => strtotime($_POST['end']),
 			'data' => array(),
 			'given' => $_POST,
+			'sql' => array(),
 		);
 
 		foreach($_POST['metrics'] as $met) {
@@ -58,7 +59,9 @@ class Graph {
 					break;
 			}
 
-			$ret['data'][] = getDatabase()->all("SELECT `server`,`world`,`timestamp`,`metric`" . $additionals . " FROM `world_usage` " . $wherestring . " " . $groupstring . " ORDER BY `timestamp` ASC", array(':value' => $split[1], ':metric' => $metric));
+			$ret['sql'][] = $sql = "SELECT `server`,`world`,`timestamp`,`metric`" . $additionals . " FROM `world_usage` " . $wherestring . " " . $groupstring . " ORDER BY `timestamp` ASC";
+
+			$ret['data'][] = getDatabase()->all($sql, array(':value' => $split[1], ':metric' => $metric));
 		}
 		return $ret;
 	}
