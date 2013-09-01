@@ -37,8 +37,8 @@
 
 		<div class="span1">
 			<select class="span12" name="x_unit" id="xUnit">
+				<option selected value="hour">Hours</option>
 				<option value="day">Days</option>
-				<option value="hour">Hours</option>
 				<option value="week">Weeks</option>
 				<option value="month">Months</option>
 			</select>
