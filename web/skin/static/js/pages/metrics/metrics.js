@@ -59,4 +59,6 @@ $(document).ready(function() {
 			}
 		});
 	});
+
+	$("#graph-it").click(); // First click, why re-invent the wheel?
 });
