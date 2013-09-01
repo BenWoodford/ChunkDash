@@ -38,4 +38,17 @@ function ago($time, $plural = false, $suffix = "")
 
 	return $difference . " " . $periods[$j] . $suffix;
 }
+
+function formatDateGrouping($x_unit, $col = "timestamp") {
+	switch($x_unit) {
+		case 'month':
+			return "MONTH(`" . $col . "`)";
+		case 'week':
+			return "WEEK(`" . $col . "`)";
+		case 'day':
+			return "DAY(`" . $col . "`");
+		case 'hour':
+			return "HOUR(`" . $col . "`");
+	}
+}
 ?>
