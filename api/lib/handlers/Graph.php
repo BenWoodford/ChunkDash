@@ -79,7 +79,7 @@ class Graph {
 			}
 
 			$data = array(
-				'label' => $split[1] . " - " . $metric,
+				'label' => $split[0] . " - " . $split[1] . " - " . $metric,
 				'data' => $points,
 			);
 
