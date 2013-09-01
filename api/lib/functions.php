@@ -51,7 +51,7 @@ function formatDateGrouping($x_unit, $col = "timestamp") {
 			return "GROUP BY DAY(FROM_UNIXTIME(`" . $col . "`))";
 			break;
 		case 'hour':
-			return "GROUP BY HOUR(FROM_UNIXTIME(`" . $col . "`)";
+			return "GROUP BY HOUR(FROM_UNIXTIME(`" . $col . "`))";
 			break;
 	}
 }
