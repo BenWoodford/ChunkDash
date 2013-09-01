@@ -2,6 +2,6 @@
 
 class Graph {
 	static function stub() {
-		return var_export(func_get_args(), true);
+		return var_export($_POST, true);
 	}
 }
