@@ -1,5 +1,5 @@
 <h1>Metrics</h1>
-<form class="form-horizontal">
+<form class="form-horizontal" id="filterForm">
 	<div class="row-fluid">
 		<div class="span7">
 			<select class="span12" id="selectMetrics" multiple data-rel="chosen">

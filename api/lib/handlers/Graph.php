@@ -5,3 +5,5 @@ class Graph {
 		return var_export($_POST, true);
 	}
 }
+
+?>
