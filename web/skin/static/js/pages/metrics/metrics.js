@@ -18,7 +18,7 @@ $(document).ready(function() {
 		      endDate: moment(),
 		    },
 		    function(start, end) {
-		        $(picker).find('span').html(start.format('MMMM D, YYYY h:mm A') + ' - ' + end.format('MMMM D, YYYY h:mm A'));
+		        $(picker).find('span').html(start.format('MM D, YYYY h:mm A') + ' - ' + end.format('MM D, YYYY h:mm A'));
 		        $(picker).find('input.start').val(start);
 		        $(picker).find('input.end').val(end);
 		    }
