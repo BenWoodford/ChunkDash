@@ -43,6 +43,7 @@ $(document).ready(function() {
 								tickColor: "#dddddd",
 								borderWidth: 0
 							},
+							legend: { position: 'ne' },
 							yaxis: { min: data.axis.y.min, max: data.axis.y.max },
 							xaxis: {
 						   		mode: "time",
