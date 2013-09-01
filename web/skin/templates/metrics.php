@@ -13,9 +13,7 @@
 		<div class="control-group">
 			<label class="control-label">Date Range</label>
 			<div class="controls">
-				<input type="text" class="input-large datepicker" id="dateTo" value="<?=$yesterday;?>">
-				-
-				<input type="text" class="input-large datepicker" id="dateFrom" value="<?=$today;?>">
+				<input type="text" class="input-small datepicker" id="dateTo" value="<?=$yesterday;?>"> - <input type="text" class="input-small datepicker" id="dateFrom" value="<?=$today;?>">
 			</div>
 		</div>
 	</div>
