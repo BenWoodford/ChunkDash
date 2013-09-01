@@ -3,7 +3,9 @@ $(document).ready(function() {
 		var picker = $(this);
 		$(picker).daterangepicker(
 		    {
+		      timePicker: true, timePickerIncrement: 30,
 		      ranges: {
+		      	 'Last Hour': [moment().subtract('hours', 1), moment()]
 		         'Today': [moment(), moment()],
 		         'Yesterday': [moment().subtract('days', 1), moment().subtract('days', 1)],
 		         'Last 7 Days': [moment().subtract('days', 6), moment()],
@@ -13,8 +15,6 @@ $(document).ready(function() {
 		      },
 		      startDate: moment().subtract('days', 29),
 		      endDate: moment(),
-		      timePicker: true,
-		      timePickerIncrement: 30,
 		    },
 		    function(start, end) {
 		        $(picker).find('span').html(start.format('MMMM D, YYYY h:mm A') + ' - ' + end.format('MMMM D, YYYY h:mm A'));
