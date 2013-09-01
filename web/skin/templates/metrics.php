@@ -23,7 +23,7 @@
 		</div>
 
 		<div class="span3">
-			<div class="datepicker-prepick" id="graph-range">
+			<div class="daterange-prepick" id="graph-range">
 				<i class="icon-calendar icon-large"></i>
 				<span><?=$yesterday;?> - <?=$today;?></span>
 				<input type="hidden" class="start" name="start" />
