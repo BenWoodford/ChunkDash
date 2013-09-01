@@ -30,33 +30,31 @@ $(document).ready(function() {
 	$("#graph-it").click(function(e) {
 		e.preventDefault();
 		$.post('/api/graphs', $("#filterForm").serialize(), function(data, textStatus, xhr) {
-			if(data.series.length > 0) {
-				var plot = $.plot($("#graph"),
-						data.series, {
-							series: {
-								lines: { show: true,
-									lineWidth: 2,
-								},
-								points: { show: true },
-								shadowSize: 2
+			var plot = $.plot($("#graph"),
+					data.series, {
+						series: {
+							lines: { show: true,
+								lineWidth: 2,
 							},
-							grid: { hoverable: false,
-								clickable: false,
-								tickColor: "#dddddd",
-								borderWidth: 0
-							},
-							legend: { position: 'ne' },
-							yaxis: { min: data.axis.y.min, max: data.axis.y.max },
-							xaxis: {
-						   		mode: "time",
-						   		minTickSize: [1, data.axis.x.unit],
-						   		min: (new Date(data.axis.x.min)).getTime(),
-						   		max: (new Date(data.axis.x.max)).getTime(),
-							},
-							colors: colours.slice(0,data.series.length),
-					}
-				);
-			}
+							points: { show: true },
+							shadowSize: 2
+						},
+						grid: { hoverable: false,
+							clickable: false,
+							tickColor: "#dddddd",
+							borderWidth: 0
+						},
+						legend: { position: 'ne' },
+						yaxis: { min: data.axis.y.min, max: data.axis.y.max },
+						xaxis: {
+					   		mode: "time",
+					   		minTickSize: [1, data.axis.x.unit],
+					   		min: (new Date(data.axis.x.min)).getTime(),
+					   		max: (new Date(data.axis.x.max)).getTime(),
+						},
+						colors: colours.slice(0,data.series.length),
+				}
+			);
 		});
 	});
 
