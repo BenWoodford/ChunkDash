@@ -107,7 +107,7 @@ class Graph {
 				}
 			}
 
- 			$ret['axis']['y']['max'] =+ orderOfMagnitude($ret['axis']['y']['max']);
+ 			$ret['axis']['y']['max'] += orderOfMagnitude($ret['axis']['y']['max']);
 
 			if(count($data['data']) > 0)
 				$ret['series'][] = $data;
