@@ -6,6 +6,6 @@ class Metrics extends Router {
 
 		getTemplate()->display('metrics.php', array('today' => date("d/m/Y"), 'yesterday' => date("d/m/Y", strtotime("yesterday"))));
 
-		parent::end();
+		parent::end(array('/skin/static/js/pages/metrics/metrics.js'));
 	}
 }
