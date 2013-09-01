@@ -77,7 +77,7 @@ class Graph {
 			$dbret = getDatabase()->all($sql);
 
 			foreach($dbret as $res) {
-				$points[$res['timestamp']] = $res['point'];
+				$points[$res['timestamp']] = @floatval($res['point']);
 			}
 
 			$data = array(
