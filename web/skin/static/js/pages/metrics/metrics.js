@@ -28,7 +28,26 @@ $(document).ready(function() {
 	$("#graph-it").click(function(e) {
 		e.preventDefault();
 		$.post('/api/graphs', $("#filterForm").serialize(), function(data, textStatus, xhr) {
-			console.log(data);
+			if(data.series.length > 0) {
+				var plot = $.plot($("#graph"),
+						[ data.series ], {
+							series: {
+								lines: { show: true,
+									lineWidth: 2,
+								},
+								points: { show: true },
+								shadowSize: 2
+							},
+							grid: { hoverable: false,
+								clickable: false,
+								tickColor: "#dddddd",
+								borderWidth: 0
+							},
+						   yaxis: { min: data.axis.min, max: data.axis.max },
+						   /*colors: ["#FA5833", "#2FABE9"]*/
+					}
+				);
+			}
 		});
 	});
 });

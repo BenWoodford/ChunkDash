@@ -12,6 +12,7 @@ class Graph {
 			'series' => array(),
 			'given' => $_POST,
 			'sql' => array(),
+			'axis' => array('min'=>null,'max'=>null),
 		);
 
 		foreach($_POST['metrics'] as $met) {
@@ -69,6 +70,16 @@ class Graph {
 				'label' => $split[1] . " - " . $metric,
 				'data' => getDatabase()->all($sql);
 			);
+
+			foreach($data['data'] as $d) {
+				if($d['point'] > $ret['axis']['max'] || $ret['axis']['max'] == null) {
+					$ret['axis']['max'] = $d['point'];
+				}
+
+				if($d['point'] < $ret['axis']['min'] || $ret['axis']['min'] == null) {
+					$ret['axis']['min'] = $d['point'];
+				}
+			}
 
 			$ret['series'][] = $data;
 		}
