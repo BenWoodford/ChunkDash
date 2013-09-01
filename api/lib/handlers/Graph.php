@@ -9,7 +9,7 @@ class Graph {
 		$ret = array(
 			'start' => strtotime($_POST['start']),
 			'end' => strtotime($_POST['end']),
-			'data' => array(),
+			'series' => array(),
 			'given' => $_POST,
 			'sql' => array(),
 		);
@@ -65,7 +65,12 @@ class Graph {
 
 			$ret['sql'][] = $sql = "SELECT `server`,`world`,`timestamp`,`metric`" . $additionals . " FROM `world_usage` " . $wherestring . " " . $groupstring . " ORDER BY `timestamp` ASC";
 
-			$ret['data'][] = getDatabase()->all($sql);
+			$data = array(
+				'label' => $split[1] . " - " . $metric,
+				'data' => getDatabase()->all($sql);
+			);
+
+			$ret['series'][] = $data;
 		}
 		return $ret;
 	}
