@@ -49,6 +49,7 @@ $(document).ready(function() {
 		$("#content").load(page + " #innercontent", function() {
 			$("#content #innercontent").fadeIn();
 			$.getScript("/skin/static/js/pages/" + page + "/" + page + ".js");
+			template_functions();
 		});
 	});
 
