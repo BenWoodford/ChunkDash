@@ -29,7 +29,7 @@ $(document).ready(function() {
 
 	$("#graph-it").click(function(e) {
 		e.preventDefault();
-		$.post('/api/graphs', $("#filterForm").serialize(), function(data, textStatus, xhr) {
+		$.post('/api/graphs/metrics', $("#filterForm").serialize(), function(data, textStatus, xhr) {
 			var plot = $.plot($("#graph"),
 					data.series, {
 						series: {

@@ -32,7 +32,7 @@ class Graph {
 		$rows = getDatabase()->all($sql);
 
 		foreach($rows as $row) {
-			$ret[$row['world']][$row['metric']][] = $row['value'];
+			$ret[$row['world']][$row['metric']][] = array($row['timestamp'] * 1000, $row['value']);
 
 			if($row['value'] > $ret['axis']['y']['max'] || $ret['axis']['y']['max'] == null) {
 				$ret['axis']['y']['max'] = $row['value'];
