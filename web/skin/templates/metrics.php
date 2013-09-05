@@ -32,6 +32,11 @@
 				<option value="aragorn_chunks_themuseum_max">Aragorn (Museum) - Peak Chunks</option>
 				<option value="aragorn_chunks_themuseum_avg">Aragorn (Museum) - Avg Chunks</option>
 				<option value="aragorn_chunks_themuseum_min">Aragorn (Museum) - Min Chunks</option>
+
+				<option value="socialmedia_twitter_tweets">Twitter - Tweets</option>
+				<option value="socialmedia_twitter_followers">Twitter - Followers</option>
+
+				<option value="socialmedia_facebook_likes">Facebook - Likes</option>
 			</select>
 		</div>
 
