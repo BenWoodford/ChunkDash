@@ -26,7 +26,7 @@ $(document).ready(function() {
 		);
 
 		var plot = $.plot($("#twittergraph"),
-				[ { label: "Followers", data: data.facebook.likes } ], {
+				[ { label: "Followers", data: data.twitter.followers } ], {
 					series: {
 						lines: { show: true,
 							lineWidth: 2,
