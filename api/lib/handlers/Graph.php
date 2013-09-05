@@ -29,9 +29,9 @@ class Graph {
 			$sql .= " GROUP BY DAY(FROM_UNIXTIME(`timestamp`))";
 		}
 
-		$rows = getDatabase()->all($sql);
+		$sql .= ",`world`,`metric`";
 
-		return $rows;
+		$rows = getDatabase()->all($sql);
 
 		foreach($rows as $row) {
 			$ret[$row['world']][$row['metric']][] = array($row['timestamp'] * 1000, $row['value']);
