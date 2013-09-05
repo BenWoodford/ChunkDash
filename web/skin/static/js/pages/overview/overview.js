@@ -5,9 +5,10 @@ $(document).ready(function() {
 					series: {
 						lines: { show: true,
 							lineWidth: 2,
+							fill: true, fillColor: { colors: [ { opacity: 0.5}, {opacity: 0.2}]}
 						},
 						points: { show: true },
-						shadowSize: 2
+						shadowSize: 0
 					},
 					grid: { hoverable: false,
 						clickable: false,
@@ -18,8 +19,9 @@ $(document).ready(function() {
 					yaxis: { min: 0, max: data.axis.y.max },
 					xaxis: {
 				   		mode: "time",
-				   		minTickSize: [1, "week"],
+				   		minTickSize: [1, "day"],
 					},
+					colors: ["#3B5998"],
 			}
 		);
 	});
