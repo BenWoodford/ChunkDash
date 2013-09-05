@@ -31,6 +31,8 @@ class Graph {
 
 		$rows = getDatabase()->all($sql);
 
+		return $rows;
+
 		foreach($rows as $row) {
 			$ret[$row['world']][$row['metric']][] = array($row['timestamp'] * 1000, $row['value']);
 
