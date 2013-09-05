@@ -5,6 +5,10 @@ class Graph {
 		return array('response' => 'error', 'message' => 'POST only.');
 	}
 
+	static function getSocial() {
+
+	}
+
 	static function postMetrics() {
 		$ret = array(
 			'start' => strtotime($_POST['start']),
@@ -51,7 +55,13 @@ class Graph {
 				$metric = $split[2];
 			}
 
-			$wherestring .= " `metric` = '" . $split[1] . "_" . $metric . "' AND `timestamp` BETWEEN " . $ret['start'] . " AND " . $ret['end'];
+			if($split['0'] == 'socialmedia') {
+				$wherestring .= " `world` = '" . $split[1] . "' AND `metric` = '" . $metric;
+			} else {
+				$wherestring .= " `metric` = '" . $split[1] . "_" . $metric;
+			}
+
+			$wherestring .= "' AND `timestamp` BETWEEN " . $ret['start'] . " AND " . $ret['end'];
 			$additionals = "";
 
 			switch($metric) {
@@ -65,6 +75,10 @@ class Graph {
 
 				case 'min':
 					$additionals .= ",MIN(`value`) as point";
+					break;
+
+				default:
+					$additionals .= ",`value` as point";
 					break;
 			}
 
