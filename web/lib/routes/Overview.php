@@ -6,6 +6,6 @@ class Overview extends Router {
 
 		getTemplate()->display('overview.php');
 
-		parent::end();
+		parent::end(array('/skin/static/js/pages/overview/overview.js'));
 	}
 }
