@@ -5,8 +5,43 @@ class Graph {
 		return array('response' => 'error', 'message' => 'POST only.');
 	}
 
-	static function getSocial() {
+	static function getSocial($timeframe) {
+		$ret = array(
+			'start' => strtotime("-1 " . $timeframe),
+			'end' => time(),
+			'twitter' => array(
+				'tweets' => array(),
+				'followers' => array()
+			),
+			'facebook' => array(
+				'likes' => array(),
+			),
+			'axis' => array(
+				'y' => array('min' => null, 'max' => null),
+			)
+		);
 
+		$sql = "SELECT *,AVG(`value`) as `point` FROM `world_usage` WHERE `server` = 'socialmedia' AND `timestamp` BETWEEN " . $ret['start'] . " AND " . $ret['end'];
+
+		if($timeframe == 'year') {
+			$sql .= " GROUP BY MONTH(FROM_UNIXTIME(`timestamp`))";
+		} else {
+			$sql .= " GROUP BY DAY(FROM_UNIXTIME(`timestamp`))";
+		}
+
+		$rows = getDatabase()->all($sql);
+
+		foreach($rows as $row) {
+			$ret[$row['world']][$row['metric']][] = $row['value'];
+
+			if($row['value'] > $ret['axis']['y']['max'] || $ret['axis']['y']['max'] == null) {
+				$ret['axis']['y']['max'] = $row['value'];
+			}
+		}
+
+		$ret['axis']['y']['max'] += orderOfMagnitude($ret['axis']['y']['max']);
+
+		return $ret;
 	}
 
 	static function postMetrics() {
@@ -20,7 +55,6 @@ class Graph {
 				'x' => array('min' => null, 'max' => null, 'unit' => $_POST['x_unit']),
 				'y' => array('min' => 0,'max' => null),
 			),
-			'colours' => array(),
 		);
 
 		foreach($_POST['metrics'] as $met) {
